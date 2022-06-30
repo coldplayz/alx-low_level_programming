@@ -15,3 +15,6 @@
 
 5-printf
 * print with printf
+
+6-size.c
+* print type sizes
