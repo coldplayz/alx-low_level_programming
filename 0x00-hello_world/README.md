@@ -6,3 +6,6 @@
 
 2-assembler
 * save only compiler output (assembly code)
+
+3-name
+* compiles an executable
