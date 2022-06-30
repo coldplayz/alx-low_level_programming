@@ -21,3 +21,6 @@
 
 100-intel
 * generate assembly code
+
+101-quote.c
+* printing to stderr
