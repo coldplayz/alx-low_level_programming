@@ -9,3 +9,6 @@
 
 3-name
 * compiles an executable
+
+4-puts.c
+* C program to print string
