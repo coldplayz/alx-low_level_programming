@@ -12,3 +12,6 @@
 
 4-puts.c
 * C program to print string
+
+5-printf
+* print with printf
