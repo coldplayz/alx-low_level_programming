@@ -13,8 +13,11 @@
 4-puts.c
 * C program to print string
 
-5-printf
+5-printf.c
 * print with printf
 
 6-size.c
 * print type sizes
+
+100-intel
+* generate assembly code
