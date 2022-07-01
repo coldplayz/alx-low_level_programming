@@ -33,3 +33,6 @@
 
 101-
 * combo of three digits
+
+102-
+* combo of two 2-digits
