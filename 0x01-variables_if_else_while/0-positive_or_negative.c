@@ -1,8 +1,12 @@
 #include <stdlib.h>
 #include <time.h>
-/* more headers goes there */
+#include <stdio.h>
 
-/* betty style doc for function main goes there */
+/**
+ * main - prints a random number each time
+ *
+ * Return: always zero
+ */
 int main(void)
 {
 	int n;
@@ -11,11 +15,12 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 
 	char description;
-	if(n < 0)
+
+	if (n < 0)
 	{
 		description = "is positive";
 	}
-	else if(n = 0)
+	else if (n == 0)
 	{
 		description = "is zero";
 	}
@@ -24,6 +29,6 @@ int main(void)
 		description = "is negative";
 	}
 
-	printf("%d %c\n", n, description)
+	printf("%d %c\n", n, description);
 	return (0);
 }
