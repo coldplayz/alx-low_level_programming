@@ -15,19 +15,18 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
-	if (n < 0)
+	if (n > 0)
 	{
-		(char)description = "is positive";
+		printf("%i is positive\n", n);
 	}
 	else if (n == 0)
 	{
-		(char)description = "is zero";
+		printf("%i is zero\n", n);
 	}
-	else
+	else if (n < 0)
 	{
-		(char)description = "is negative";
+		printf("%i is negative\n", n);
 	}
 
-	printf("%d %c\n", n, description);
 	return (0);
 }
