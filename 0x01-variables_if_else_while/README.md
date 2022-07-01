@@ -18,3 +18,6 @@
 
 6-
 * print from zero
+
+7-
+* print lowercase in reverse
