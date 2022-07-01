@@ -27,3 +27,6 @@
 
 9-
 * print all possible combo of singles
+
+100-
+* combo of two digits
