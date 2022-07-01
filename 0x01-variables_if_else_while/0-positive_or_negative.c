@@ -10,11 +10,11 @@
 int main(void)
 {
 	int n;
+	char description;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
-	char description;
 
 	if (n < 0)
 	{
