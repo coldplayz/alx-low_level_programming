@@ -6,3 +6,6 @@
 
 2-
 * print in lowercase
+
+3-
+* print upper then lower
