@@ -12,3 +12,6 @@
 
 4-
 * print alphabet then newline
+
+5-
+* print all single-digit num
