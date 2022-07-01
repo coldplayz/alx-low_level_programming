@@ -9,3 +9,6 @@
 
 3-
 * print upper then lower
+
+4-
+* print alphabet then newline
