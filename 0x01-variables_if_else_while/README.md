@@ -24,3 +24,6 @@
 
 8-
 * print base16 in lowercase
+
+9-
+* print all possible combo of singles
