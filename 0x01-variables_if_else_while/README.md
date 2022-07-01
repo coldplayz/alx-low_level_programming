@@ -30,3 +30,6 @@
 
 100-
 * combo of two digits
+
+101-
+* combo of three digits
