@@ -15,3 +15,6 @@
 
 5-
 * print all single-digit num
+
+6-
+* print from zero
