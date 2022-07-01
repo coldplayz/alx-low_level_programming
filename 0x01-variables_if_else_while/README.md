@@ -21,3 +21,6 @@
 
 7-
 * print lowercase in reverse
+
+8-
+* print base16 in lowercase
