@@ -39,3 +39,6 @@
 
 101-natural.c
 * computes and prints the sum of all the multiples of 3 or 5 below 1024 (excluded), followed by a new line.
+
+102-fibonacci.c
+* prints the first 50 Fibonacci numbers, starting with 1 and 2, followed by a new line.
