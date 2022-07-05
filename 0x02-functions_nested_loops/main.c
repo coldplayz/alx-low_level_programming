@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * main - prints lowercase alphabets
@@ -9,6 +8,6 @@
 	 int r;
 
 	 r = print_last_digit(-5674);
-	 printf("%d\n", r);
+	 _putchar(r + '0');
 	 return (0);
 }
