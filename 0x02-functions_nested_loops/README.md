@@ -6,3 +6,6 @@
 
 2-print_alphabet_x10.c
 * print 10x the lowercase alphabets
+
+3-islower.c
+* function that checks for lowercase character.
