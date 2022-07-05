@@ -7,14 +7,13 @@
 int _islower(int c)
 {
 	char lower = 'a';
-	char upper = 'A';
 
 	while (lower <= 'z')
 	{
 		if (c == lower)
 		{
 			return (1);
-			lower++;
 		}
+		lower++;
 	}
 	return (0);
