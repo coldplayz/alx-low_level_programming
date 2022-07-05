@@ -18,3 +18,6 @@
 
 6-abs.c
 * computes absolute values
+
+7-print_last_digit.c
+* print last digits of a number

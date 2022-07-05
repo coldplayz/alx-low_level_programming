@@ -8,7 +8,7 @@
  */                                               int main(void)                                    {
 	 int r;
 
-	 r = _abs(-5);
+	 r = print_last_digit(-5674);
 	 printf("%d\n", r);
 	 return (0);
 }
