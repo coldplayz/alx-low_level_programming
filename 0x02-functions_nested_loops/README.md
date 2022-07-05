@@ -12,3 +12,6 @@
 
 4-isalpha.c
 * function that checks for alphabetic character.
+
+5-sign.c
+* checks for sign.
