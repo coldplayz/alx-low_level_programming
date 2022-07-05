@@ -21,3 +21,6 @@
 
 7-print_last_digit.c
 * print last digits of a number
+
+8-24_hours.c
+* print every minute of the day
