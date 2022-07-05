@@ -17,3 +17,4 @@ int _islower(int c)
 		lower++;
 	}
 	return (0);
+}
