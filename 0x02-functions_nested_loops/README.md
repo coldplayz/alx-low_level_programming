@@ -33,3 +33,6 @@
 
 11-print_to_98
 * function that prints all natural numbers from n to 98, followed by a new line.
+
+100-times_table.c
+* print n times table
