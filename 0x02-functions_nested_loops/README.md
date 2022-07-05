@@ -15,3 +15,6 @@
 
 5-sign.c
 * checks for sign.
+
+6-abs.c
+* computes absolute values
