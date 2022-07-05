@@ -27,3 +27,6 @@
 
 9-times_table.c
 * function that prints the 9 times table, starting with 0.
+
+10-add.c
+* function to add two numbers
