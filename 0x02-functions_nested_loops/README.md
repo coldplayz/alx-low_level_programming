@@ -9,3 +9,6 @@
 
 3-islower.c
 * function that checks for lowercase character.
+
+4-isalpha.c
+* function that checks for alphabetic character.
