@@ -33,3 +33,6 @@
 
 100-prime_factor.c
 * prints largest prime factor of a huge number
+
+101-print_number.c
+* prints integers
