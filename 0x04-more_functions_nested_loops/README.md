@@ -3,3 +3,6 @@
 
 1-isdigit.c
 * checks for digits
+
+2-mul.c
+* multiplies two integers
