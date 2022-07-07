@@ -27,3 +27,6 @@
 
 9-fizz_buzz.c
 * the FizzBuzz test
+
+10-print_triangle.c
+* print triangle of pound symbols
