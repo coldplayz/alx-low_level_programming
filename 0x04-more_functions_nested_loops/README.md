@@ -21,3 +21,6 @@
 
 7-print_diagonal.c
 * print diagonals
+
+8-print_square.c
+* print sqares with pound symbol
