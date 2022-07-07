@@ -18,3 +18,6 @@
 
 6-print_line.c
 * print out specified number of underscores
+
+7-print_diagonal.c
+* print diagonals
