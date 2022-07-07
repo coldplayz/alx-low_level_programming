@@ -1,0 +1,23 @@
+gggggggggg
+ggggggg
+cat: me: No such file or directory
+me
+while (r > 7)
+
+		ghhh
+	}
+ttttt
+#ifndef MAIN_H
+#define MAIN_H
+
+#include <stdio.h>
+
+
+
+
+void neg_or_negative(integer i);
+integer largest_number(integer a, integer b, integer c);
+void printeger_remaining_days(integer month, integer day, integer year);
+ger convert_day(integer month, integer day);
+
+#endif /* MAIN_H */
