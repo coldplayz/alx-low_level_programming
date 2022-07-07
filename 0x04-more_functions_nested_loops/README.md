@@ -15,3 +15,6 @@
 
 5-more_numbers.c
 * print numbers 0 - 14, ten times
+
+6-print_line.c
+* print out specified number of underscores
