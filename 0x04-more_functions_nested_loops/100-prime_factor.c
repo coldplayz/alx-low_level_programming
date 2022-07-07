@@ -7,9 +7,9 @@
  */
 int main(void)
 {
-	long long max_factor, divisor = 2;
+	unsigned long max_factor, divisor = 2;
 
-	long long n = 612852475143, divisor_limit = ((n / 2) + 1);
+	unsigned long n = 612852475143, divisor_limit = ((n / 2) + 1);
 
 	while (divisor <= divisor_limit)
 	{
@@ -23,7 +23,7 @@ int main(void)
 		}
 		divisor++;
 	}
-	printf("%lld\n", max_factor);
+	printf("%lu\n", max_factor);
 
 	return (0);
 }
