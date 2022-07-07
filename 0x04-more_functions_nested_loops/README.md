@@ -30,3 +30,6 @@
 
 10-print_triangle.c
 * print triangle of pound symbols
+
+100-prime_factor.c
+* prints largest prime factor of a huge number
