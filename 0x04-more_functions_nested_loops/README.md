@@ -24,3 +24,6 @@
 
 8-print_square.c
 * print sqares with pound symbol
+
+9-fizz_buzz.c
+* the FizzBuzz test
