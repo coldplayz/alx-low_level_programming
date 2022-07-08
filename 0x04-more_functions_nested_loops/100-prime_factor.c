@@ -9,7 +9,7 @@ int main(void)
 {
 	long max_factor, divisor = 2;
 
-	long n = 612852475143, divisor_limit = ((n / 2) + 1);
+	long n = 612852475143, divisor_limit = ((n / 1000) + 1);
 
 	while (divisor <= divisor_limit)
 	{
