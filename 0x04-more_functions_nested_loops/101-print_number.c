@@ -91,7 +91,7 @@ void print_negative(int n)
 void print_positive(int n)
 {
 	int power, low_lim = 10, high_lim = 100, length_flag = 1;
-	int length_tracker = 2, last_high = 1000000000;
+	int length_tracker = 2, last_low = 1000000000;
 
 	if (n >= 0 && n <= 9)
 	{
@@ -100,7 +100,18 @@ void print_positive(int n)
 	}
 	while (length_flag)
 	{
-		if (n >= low_lim && n < high_lim)
+		if (low_lim == last_low)
+		{
+			length_flag = 0;
+			while (length_tracker)
+			{
+				power = pwr(10, length_tracker - 1);
+				_putchar((n / power) + '0');
+				n = n % power;
+				length_tracker--;
+			}
+		}
+		else if (n >= low_lim && n < high_lim)
 		{
 			length_flag = 0;
 			while (length_tracker)
