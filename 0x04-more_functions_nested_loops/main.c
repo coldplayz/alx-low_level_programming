@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <limits.h>
 
 /**
  * main - check the code
@@ -8,9 +9,7 @@
  */
 int main(void)
 {
-	int n = -21474838;
-
-	print_negative(n);
+	print_negative(INT_MIN);
 	_putchar('\n');
 
 	return (0);
