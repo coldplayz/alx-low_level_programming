@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * main - check the code
@@ -7,7 +8,9 @@
  */
 int main(void)
 {
-	print_triangle(2);
-	print_triangle(10);
+	int n = 2456;
+
+	print_number(n);
+
 	return (0);
 }
