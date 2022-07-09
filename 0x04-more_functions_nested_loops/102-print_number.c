@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -27,62 +26,95 @@ int pwr(int base, int index)
  */
 void print_number(int n)
 {
-	int power, low_lim = 10, high_lim = 100, length_flag = 1;
-	int length_tracker = 2;
-
 	if (n < 0)
 	{
-		_putchar('-');
-		if (n >= 1 && n <= 9)
-		{
-			_putchar((n * -1) + '0');
-		}
-		while (length_flag)
-		{
-			if (n >= low_lim && n < high_lim)
-			{
-				length_flag = 0;
-				while (length_tracker)
-				{
-					power = pwr(10, length_tracker);
-					_putchar(-(n / power) + '0');
-					n = n % power;
-					length_tracker--;
-				}
-			}
-			else
-			{
-				low_lim = low_lim * 10;
-				high_lim = low_lim * 10;
-				length_tracker++;
-			}
-		}
+		print_negative(n);
 	}
 	else
 	{
-		if (n >= 1 && n <= 9)
+		print_positive(n);
+	}
+}
+
+/**
+ * print_negative - prints negative integers
+ * @n: negative integer
+ */
+void print_negative(int n)
+{
+	int power, low_lim = 10, high_lim = 100, length_flag = 1;
+	int length_tracker = 2, last_low = 1000000000;
+
+	_putchar('-');
+	if (n >= -1 && n <= -9)
+	{
+		_putchar((n * -1) + '0');
+		length_flag = 0;
+	}
+	while (length_flag)
+	{
+		if (low_lim == last_low)
 		{
-			_putchar(n + '0');
+			length_flag = 0;
+			while (length_tracker)
+			{
+				power = pwr(10, length_tracker - 1);
+				_putchar(-(n / power) + '0');
+				n = n % power;
+				length_tracker--;
+			}
 		}
-		while (length_flag)
+		else if (n <= -low_lim && n > -high_lim)
 		{
-			if (n >= low_lim && n < high_lim)
+			length_flag = 0;
+			while (length_tracker)
 			{
-				length_flag = 0;
-				while (length_tracker)
-				{
-					power = pwr(10, length_tracker);
-					_putchar((n / power) + '0');
-					n = n % power;
-					length_tracker--;
-				}
+				power = pwr(10, length_tracker - 1);
+				_putchar(-(n / power) + '0');
+				n = n % power;
+				length_tracker--;
 			}
-			else
+		}
+		else
+		{
+			low_lim = low_lim * 10;
+			high_lim = low_lim * 10;
+			length_tracker++;
+		}
+	}
+}
+
+/**
+ * print_positive - print positive integers
+ * @n: positive integer to print
+ */
+void print_positive(int n)
+{
+	int power, low_lim = 10, high_lim = 100, length_flag = 1;
+	int length_tracker = 2;
+
+	if (n >= 1 && n <= 9)
+	{
+		_putchar(n + '0');
+	}
+	while (length_flag)
+	{
+		if (n >= low_lim && n < high_lim)
+		{
+			length_flag = 0;
+			while (length_tracker)
 			{
-				low_lim = low_lim * 10;
-				high_lim = low_lim * 10;
-				length_tracker++;
+				power = pwr(10, length_tracker - 1);
+				_putchar((n / power) + '0');
+				n = n % power;
+				length_tracker--;
 			}
+		}
+		else
+		{
+			low_lim = low_lim * 10;
+			high_lim = low_lim * 10;
+			length_tracker++;
 		}
 	}
 }

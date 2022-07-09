@@ -8,9 +8,10 @@
  */
 int main(void)
 {
-	int n = 2456;
+	int n = -21474838;
 
-	print_number(n);
+	print_negative(n);
+	_putchar('\n');
 
 	return (0);
 }

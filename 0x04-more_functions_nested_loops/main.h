@@ -23,3 +23,5 @@ void print_square(int size);
 void print_triangle(int size);
 void print_number(int n);
 int pwr(int base, int index);
+void print_positive(int n);
+void print_negative(int n);
