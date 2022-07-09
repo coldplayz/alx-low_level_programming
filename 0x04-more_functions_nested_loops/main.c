@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-	print_negative(INT_MIN);
+	print_negative(-3);
 	_putchar('\n');
 
 	return (0);

@@ -96,6 +96,7 @@ void print_positive(int n)
 	if (n >= 0 && n <= 9)
 	{
 		_putchar(n + '0');
+		length_flag = 0;
 	}
 	while (length_flag)
 	{
