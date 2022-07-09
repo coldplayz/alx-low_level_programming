@@ -46,7 +46,7 @@ void print_negative(int n)
 	int length_tracker = 2, last_low = 1000000000;
 
 	_putchar('-');
-	if (n >= -1 && n <= -9)
+	if (n <= -1 && n >= -9)
 	{
 		_putchar((n * -1) + '0');
 		length_flag = 0;
@@ -91,9 +91,9 @@ void print_negative(int n)
 void print_positive(int n)
 {
 	int power, low_lim = 10, high_lim = 100, length_flag = 1;
-	int length_tracker = 2;
+	int length_tracker = 2, last_high = 1000000000;
 
-	if (n >= 1 && n <= 9)
+	if (n >= 0 && n <= 9)
 	{
 		_putchar(n + '0');
 	}
