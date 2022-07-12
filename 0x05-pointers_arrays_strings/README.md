@@ -16,4 +16,7 @@ reset_to_98.c
 5-rev_string.c
 * prints string in reverse
 
+6-puts2.c
+* prints every other number
+
 
