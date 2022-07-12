@@ -6,7 +6,7 @@
  */
 void rev_string(char *s)
 {
-	int counter = 0, temp, low_index = 0, shift = 0;
+	int counter = 0, temp, len, low_index = 0, shift = 0;
 
 	/*move from first character of array s to null...*/
 	/*...to get the array length*/
@@ -14,10 +14,11 @@ void rev_string(char *s)
 	{
 		shift++;
 	}
+	len = shift - 1;
 
 	/*move from last character of array s to first, replacing...*/
 	/*...the characters with first to last characters respectively*/
-	for (shift--; counter < (shift / 2); shift--)
+	for (shift--; counter < (len / 2); shift--)
 	{
 		temp = *(s + shift);
 		*(s + shift) = s[low_index];
