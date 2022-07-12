@@ -22,4 +22,7 @@ reset_to_98.c
 7-puts_half.c
 * prints upper half of a string
 
+8-print_array.c
+* prints n elements of an array of integers, followed by a new line
+
 
