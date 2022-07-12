@@ -6,24 +6,26 @@
  */
 void rev_string(char *s)
 {
-	int counter = 0, temp, low_index = 0, shift = 0;
+	int max_index = 0, temp_index = _strlen(s), shift = 0;
+	char temp[_strlen(s)];
 
-	/*move from first character of array s to null...*/
-	/*...to get the array length*/
+	/*move from first character of array s to null, copying...*/
+	/*...array s into array temp*/
 	for (; *(s + shift);)
 	{
+		*(temp + shift) = *(s + shift);
 		shift++;
+		max_index++;
 	}
+	temp_index = 0;
 
 	/*move from last character of array s to first, replacing...*/
-	/*...the characters with first to last characters respectively*/
-	for (shift--; counter < (shift / 2); shift--)
+	/*...the characters with first to last characters of array temp*/
+	for (shift--; max_index > 0; shift--)
 	{
-		temp = *(s + shift);
-		*(s + shift) = s[low_index];
-		s[low_index] = temp;
-		low_index++;
-		counter++;
+		*(s + shift) = temp[temp_index];
+		temp_index++;
+		max_index--;
 	}
 }
 
