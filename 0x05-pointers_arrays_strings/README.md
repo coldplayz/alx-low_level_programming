@@ -4,4 +4,7 @@ reset_to_98.c
 1-swap.c
 * swap integers
 
+2-strlen.c
+* rturns the lenght of a string
+
 
