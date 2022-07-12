@@ -19,4 +19,7 @@ reset_to_98.c
 6-puts2.c
 * prints every other number
 
+7-puts_half.c
+* prints upper half of a string
+
 
