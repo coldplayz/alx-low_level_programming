@@ -14,7 +14,7 @@ void rev_string(char *s)
 	{
 		shift++;
 	}
-	len = shift - 1;
+	len = shift;
 
 	/*move from last character of array s to first, replacing...*/
 	/*...the characters with first to last characters respectively*/
