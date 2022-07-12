@@ -10,4 +10,7 @@ reset_to_98.c
 3-puts.c
 * prints strings
 
+4-print_rev.c
+* print string in reverse
+
 
