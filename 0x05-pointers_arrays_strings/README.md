@@ -13,4 +13,7 @@ reset_to_98.c
 4-print_rev.c
 * print string in reverse
 
+5-rev_string.c
+* prints string in reverse
+
 
