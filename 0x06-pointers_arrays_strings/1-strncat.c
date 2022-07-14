@@ -33,6 +33,11 @@ char *_strncat(char *dest, char *src, int n)
 	int i, dest_size;
 
 	dest_size = _strlen(dest);
+	if (n > _strlen(src))
+	{
+		n = _strlen(src);
+	}
+
 	for (i = 0; n > 0; i++)
 	{
 		/*add 'n' characters in src to dest*/
@@ -41,7 +46,7 @@ char *_strncat(char *dest, char *src, int n)
 		dest_size++;
 		n--;
 	}
-	
+
 	if (n < _strlen(src))
 	{
 		*(dest + dest_size) = '\0';
