@@ -21,7 +21,7 @@ int _strlen(char *s)
 }
 
 /**
- * _strcat - concatenates two strings, adding only 'n' bytes to dest
+ * _strncat - concatenates two strings, adding only 'n' bytes to dest
  * @dest: pointer to string to be modified
  * @src: pointer to modifier string
  * @n: integer determining number of bytes (characters) to be appended
@@ -41,6 +41,7 @@ char *_strncat(char *dest, char *src, int n)
 		dest_size++;
 		n--;
 	}
+	
 	if (n < _strlen(src))
 	{
 		*(dest + dest_size) = '\0';
