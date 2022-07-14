@@ -21,3 +21,8 @@
 
 7-leet.c
 * encodes strings in leet speak
+
+100-rot13.c
+* encode a string with rot13
+
+
