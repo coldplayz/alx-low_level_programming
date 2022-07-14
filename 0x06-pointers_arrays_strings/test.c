@@ -1,15 +1,12 @@
 #include <stdio.h>
 #include <string.h>
 
-int main () {
-	char src[40];
-	char dest[27] = "abcdefghijklmnopqrstuvwxyz";
+int main ()
+{
+	int a[] = {95, 66, 1, 2, 33, 456};
+	int size;
 
-	/*memset(dest, '\0', sizeof(dest));*/
-	strcpy(src, "This is tutorialspoint");
-	strncpy(dest, src, 10);
-
-	printf("Final copied string : %s\n", dest);
-
-	return(0);
+	size = sizeof(a) / sizeof(int);
+	printf("Size: %d\n", size);
+	return (0);
 }

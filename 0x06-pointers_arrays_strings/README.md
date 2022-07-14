@@ -10,4 +10,7 @@
 3-strcmp.c
 * compare two strings for greatness
 
+4-rev_array.c
+* reverse the order of an integer array
+
 
