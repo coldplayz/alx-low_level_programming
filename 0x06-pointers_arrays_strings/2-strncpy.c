@@ -31,7 +31,7 @@ char *_strncpy(char *dest, char *src, int n)
 {
 	int i, h;
 
-	if (n < _strlen(src))
+	if (n <= _strlen(src))
 	{
 		/*copy the required subset of src, and*/
 		/*continue with the remaining dest characters*/
