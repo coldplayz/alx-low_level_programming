@@ -14,4 +14,4 @@ int find_sign(char *s);
 int idx_num_starts(char *s);
 int strnum_int(char c);
 char *_strcat(char *dest, char *src);
-
+char *_strncat(char *dest, char *src, int n);
