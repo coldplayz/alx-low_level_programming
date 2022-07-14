@@ -29,22 +29,36 @@ int _strlen(char *s)
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i;
+	int i, h;
 
-	if (n > _strlen(src))
+	if (n < _strlen(src))
 	{
-		n = _strlen(src);
+		/*copy the required subset of src, and*/
+		/*continue with the remaining dest characters*/
+		for (h = 0; n > 0; h++)
+		{
+			*(dest + h) = *(src + h);
+			n--;
+		}
+	}
+	else
+	{
+		/*copy the characters of src, stopping at NULL*/
+		for (i = 0; *(src + i); i++)
+		{
+			*(dest + i) = *(src + i);
+		}
 	}
 
-	for (i = 0; n > 0; i++)
+	if (i < n)
 	{
-		/*copy 'n' characters in src to dest*/
-		/*starting from first character*/
-		*(dest + i) = *(src + i);
-		n--;
+		/*src is exhausted; fill remaining required space*/
+		/*with null characters*/
+		for (; i < n; i++)
+		{
+			*(dest + i) = '\0';
+		}
 	}
-
-	*(dest + i) = '\0';
 
 	return (dest);
 }
