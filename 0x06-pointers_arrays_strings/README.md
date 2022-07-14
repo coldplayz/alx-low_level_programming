@@ -28,4 +28,7 @@
 101-print_number.c
 * prints an integer
 
+102-magic.c
+* modify a program
+
 
