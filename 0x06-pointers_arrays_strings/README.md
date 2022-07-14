@@ -13,4 +13,7 @@
 4-rev_array.c
 * reverse the order of an integer array
 
+5-string_toupper.c
+* converts lower to upper cases
+
 
