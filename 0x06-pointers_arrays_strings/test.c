@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include <string.h>
+#include "main.h"
 
 int main ()
 {
-	int a[] = {95, 66, 1, 2, 33, 456};
-	int size;
+	char c = ' ';
+	int res;
 
-	size = sizeof(a) / sizeof(int);
-	printf("Size: %d\n", size);
+	res = w_separator(c);
+	printf("%d\n", res);
 	return (0);
 }

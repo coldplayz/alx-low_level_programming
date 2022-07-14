@@ -16,4 +16,7 @@
 5-string_toupper.c
 * converts lower to upper cases
 
+6-cap_string.c
+* capitalize first letter of word after specified delimiters
+
 
