@@ -19,4 +19,5 @@
 6-cap_string.c
 * capitalize first letter of word after specified delimiters
 
-
+7-leet.c
+* encodes strings in leet speak
