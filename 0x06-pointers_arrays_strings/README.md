@@ -6,3 +6,8 @@
 
 2-strncpy.c
 * copies one string into another
+
+3-strcmp.c
+* compare two strings for greatness
+
+
