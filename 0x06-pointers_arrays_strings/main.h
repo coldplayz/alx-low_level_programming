@@ -21,7 +21,12 @@ void reverse_array(int *a, int n);
 char *string_toupper(char *s);
 int w_separator(char c);
 char *cap_string(char *);
-char *leet(char *);
-char *rot13(char *);
+char *leet(char *s);
+char *rot13(char *s);
 void print_number(int n);
+void leet_map(char *c);
+void rot13_map(char *c);
+int strnumsum2int(char c1, char c2);
+char *str_adder(char *s1, char *s2, int size_r);
+char *infinite_add(char *n1, char *n2, char *r, int size_r);
 

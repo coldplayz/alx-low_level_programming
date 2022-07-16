@@ -35,7 +35,10 @@ char *cap_string(char *s)
 int w_separator(char c)
 {
 	int i;
-
+	
+	/*checks if input character matches one of space, tabulation, newline,*/
+	/*comma, semicolon, period, exclamation mark, question mark, double quote mark,*/
+	/*left brace, right brace, left curly brace, or right curly brace*/
 	char arr[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 
 	for (i = 0; i < 13; i++)
