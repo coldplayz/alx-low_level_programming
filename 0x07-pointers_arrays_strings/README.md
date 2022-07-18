@@ -10,4 +10,7 @@
 3-strspn.c
 *  the number of bytes in the initial segment of s which consist only of bytes from accept
 
+4-strpbrk.c
+* searches a string for any of a set of bytes
+
 
