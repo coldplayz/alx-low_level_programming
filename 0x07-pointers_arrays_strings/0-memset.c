@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strncpy - fills the first n bytes of the memory area
+ * _memset - fills the first n bytes of the memory area
  * pointed to by s with the constant byte b
  * @s: pointer to buffer to be filled
  * @b: the constant byte
@@ -11,7 +11,7 @@
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-	int i;
+	unsigned int i;
 
 	for (i = 0; i < n; i++)
 	{
