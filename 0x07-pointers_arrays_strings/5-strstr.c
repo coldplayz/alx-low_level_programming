@@ -14,7 +14,7 @@ char *_strstr(char *haystack, char *needle)
 	int i, j, first, count = 0;
 
 	if (*needle == '\0')
-		return (*haystack);
+		return (haystack);
 	/*start traversing haystack*/
 	for (i = 0; *(haystack + i); i++)
 	{
