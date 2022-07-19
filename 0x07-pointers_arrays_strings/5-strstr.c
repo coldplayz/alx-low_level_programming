@@ -12,7 +12,9 @@
 char *_strstr(char *haystack, char *needle)
 {
 	int i, j, first, count = 0;
-	
+
+	if (*needle == '\0')
+		return (*haystack);
 	/*start traversing haystack*/
 	for (i = 0; *(haystack + i); i++)
 	{
@@ -29,17 +31,13 @@ char *_strstr(char *haystack, char *needle)
 			{
 				j++;
 				if (count == (_strlen(needle)))
-				{
 					return (haystack + first);
-				}
 
 				if (*(haystack + i) == *(needle + j))
 				{
 					count++;
 					if (count == (_strlen(needle)))
-					{
 						return (haystack + first);
-					}
 				}
 				else
 				{
