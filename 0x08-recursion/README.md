@@ -13,4 +13,7 @@
 4-pow_recursion.c
 *  returns the value of x raised to the power of y
 
+5-sqrt_recursion.c
+* returns the natural square root of a number
+
 
