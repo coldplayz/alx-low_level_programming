@@ -22,4 +22,5 @@
 100-is_palindrome.c
 * returns 1 if a string is a palindrome and 0 if not
 
-
+101-wildcmp.c
+* compares two strings for identity, supporting the wild character '\*'
