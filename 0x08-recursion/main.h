@@ -47,4 +47,6 @@ int _sqrt_recursion(int n);
 int _sqrt(int dividend, int divisor);
 int is_prime_number(int n);
 int _is_prime(int dividend, int divisor);
+int is_palindrome(char *s);
+int is_it_palindrome(char *s1, char *s2, int n);
 
