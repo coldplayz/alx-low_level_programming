@@ -7,4 +7,5 @@
 2-strlen_recursion.c
 * returns the length of a string
 
-
+3-factorial.c
+* returns the factorial of a given number
