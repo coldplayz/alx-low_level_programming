@@ -5,20 +5,19 @@
  * @s1: string to check, starting from first item
  * @s2: same as s1 but accessed in reverse
  * @n: number of times to compare both strings
- * @len: original length of string s1
  *
  * Return: 1 if string is palindrome, 0 otherwise
  */
-int is_it_palindrome(char *s1, char *s2, int n, int len)
+int is_it_palindrome(char *s1, char *s2, int n)
 {
 	if ((*s1 == *s2) && (*s1 == 0))
 	{
 		return (1);
 	}
 
-	if (n < (len / 2))
+	if (n < (_strlen_recursion(s1) / 2))
 	{
-		if (n == ((len / 2) - 1))
+		if (n == ((_strlen_recursion(s1) / 2) - 1))
 		{
 			if (*s1 == *s2)
 			{
@@ -36,7 +35,7 @@ int is_it_palindrome(char *s1, char *s2, int n, int len)
 		}
 		else
 		{
-			return (is_it_palindrome((s1 + 1), (s2 - 1), (n + 1), len));
+			return (is_it_palindrome((s1 + 1), (s2 - 1), (n + 1)));
 		}
 	}
 	return (0);
@@ -51,13 +50,12 @@ int is_it_palindrome(char *s1, char *s2, int n, int len)
  */
 int is_palindrome(char *s)
 {
-	int n, str_index, len;
+	int n, str_index;
 
 	n = 0;
-	len = _strlen_recursion(s);
 	str_index = (_strlen_recursion(s) - 1);
 
-	return (is_it_palindrome(s, (s + str_index), n, len));
+	return (is_it_palindrome(s, (s + str_index), n));
 }
 
 
