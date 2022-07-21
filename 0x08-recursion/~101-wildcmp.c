@@ -21,7 +21,7 @@ int wildcmp(char *s1, char *s2)
 			{
 				return (1);
 			}
-			nna_val = next_non_asterisk(s1, *(aa_val + 1));
+			nna_val = next_non_asterisk(s1, *aa_val);
 			if (nna_val == ((void *)0))
 			{
 				return (0);
@@ -58,7 +58,7 @@ char *after_asterisk(char *s2)
 {
 	if (*s2 != '*')
 	{
-		return (s2 - 1);
+		return (s2);
 	}
 
 	if (*s2 == 0)
@@ -82,7 +82,7 @@ char *next_non_asterisk(char *s1, char c)
 {
 	if (*s1 == c)
 	{
-		return (s1 - 1);
+		return (s1);
 	}
 
 	if (*s1 == 0)
