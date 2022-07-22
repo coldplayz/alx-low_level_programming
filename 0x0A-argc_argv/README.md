@@ -10,4 +10,7 @@
 3-mul.c
 * prints the product of two numbers
 
+4-add.c
+* adds positive numbers
+
 
