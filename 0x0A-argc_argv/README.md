@@ -13,4 +13,5 @@
 4-add.c
 * adds positive numbers
 
-
+100-change.c
+* calculates the minimum number of coins of value 25, 10, 5, 2, and/or 1 cents, neede to make change for the input amount of money
