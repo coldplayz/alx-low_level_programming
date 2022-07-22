@@ -7,4 +7,7 @@
 2-args.c
 * print all arguments passed to it
 
+3-mul.c
+* prints the product of two numbers
+
 
