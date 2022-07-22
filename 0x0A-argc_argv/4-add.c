@@ -24,13 +24,13 @@ int main(int argc, char *argv[])
 		{
 			for (j = 0; *(argv[i] + j); j++)
 			{
-				if ((*(argv[i] + j) < 48) || (*(argv[i] + j) > 57))
+				if (((*(argv[i] + j) < 48) || (*(argv[i] + j) > 57)))
 				{
 					printf("%s\n", "Error");
 					return (1);
 				}
-				sum += atoi(argv[i]);
 			}
+			sum += atoi(argv[i]);
 		}
 
 		printf("%d\n", sum);
