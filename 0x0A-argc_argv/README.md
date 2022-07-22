@@ -4,4 +4,7 @@
 1-args.c
 * prints the number of arguments passed to it
 
+2-args.c
+* print all arguments passed to it
+
 
