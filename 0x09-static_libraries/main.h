@@ -1,3 +1,6 @@
+#ifndef MAIN_H
+#define MAIN_H
+
 char *_memcpy(char *dest, char *src, unsigned int n);
 char *_memset(char *s, char b, unsigned int n);
 char *_strcat(char *dest, char *src);
@@ -77,3 +80,5 @@ void rot13_map(char *c);
 void set_string(char **s, char *to);
 void swap_int(int *a, int *b);
 void times_table(void);
+
+#endif /* MAIN_H */
