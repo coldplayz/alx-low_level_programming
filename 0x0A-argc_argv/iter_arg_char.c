@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main -
+ * main - iterates through the characters of argv strings (printing each)
  * @argc: an integer representing the number of arguments passed to main
  * @argv: an array of pointers (pointer-to-pointer) to the string
  * representation of the command line arguments
@@ -11,9 +11,11 @@
 int main(int argc, char *argv[])
 {
 	int i;
-	(void)argc;
+	(void)argc; /*declare argc as unused*/
 
-	for (i = 0; i < 3; i++)
+	/*this traverses the string of*/
+	/*the second argument, five times*/
+	for (i = 0; i < 5; i++)
 	{
 		printf("%c\n", *(argv[1] + i));
 	}
