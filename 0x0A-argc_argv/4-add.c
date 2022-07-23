@@ -14,14 +14,19 @@ int main(int argc, char *argv[])
 {
 	int i, j, sum = 0;
 
+	/*if program is only called/launched...1*/
 	if (argc == 1)
 	{
 		printf("%d\n", 0);
 	}
 	else
 	{
+		/*this loop ensures the processing of a variable*/
+		/*number of arguments to main*/
 		for (i = 1; i < argc; i++)
 		{
+			/*1...else, traverse the characters of each argument to check for*/
+			/*those that contain symbols (xters) other than numeric ones (0 - 9)*/
 			for (j = 0; *(argv[i] + j); j++)
 			{
 				if (((*(argv[i] + j) < 48) || (*(argv[i] + j) > 57)))
