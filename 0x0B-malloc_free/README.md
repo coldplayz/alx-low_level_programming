@@ -16,4 +16,5 @@
 100-argstostr.c
 * concatenates all the arguments of your program.
 
-
+101-strtow.c
+* splits a string into words
