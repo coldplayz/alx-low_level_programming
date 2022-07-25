@@ -4,4 +4,7 @@
 1-strdup.c
 * copies a string to newly allocated memory
 
+2-str_concat.c
+* concatenates two strings
+
 
