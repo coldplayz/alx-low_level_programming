@@ -10,4 +10,7 @@
 3-alloc_grid.c
 * returns a pointer to a 2 dimensional array of integers.
 
+4-free_grid.c
+* frees the grid created using alloc_grid above
+
 

@@ -1,0 +1,278 @@
+==18490== Memcheck, a memory error detector
+==18490== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==18490== Using Valgrind-3.19.0 and LibVEX; rerun with -h for copyright info
+==18490== Command: ./a.out
+==18490== 
+==18490== Conditional jump or move depends on uninitialised value(s)
+==18490==    at 0x40C1320: __dl_strlen_default (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x40BE4CF: __dl__ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404BDD7: __dl__Z14normalize_pathPKcPNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404C4DF: __dl__Z12resolve_pathRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404223B: __dl__ZN10Properties9get_pathsERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEEbPm (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404172B: __dl__ZN6Config18read_binary_configEPKcS1_bPPKS_PNSt3__112basic_stringIcNS5_11char_traitsIcEENS5_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x40387E7: __dl__Z23init_default_namespacesPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x4081243: __dl__ZL29__linker_init_post_relocationR19KernelArgumentBlockR6soinfo (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x408041F: __dl___linker_init (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404CC37: __dl__start (in /apex/com.android.runtime/bin/linker64)
+==18490== 
+==18490== Conditional jump or move depends on uninitialised value(s)
+==18490==    at 0x40BE4E0: __dl__ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404BDD7: __dl__Z14normalize_pathPKcPNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404C4DF: __dl__Z12resolve_pathRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404223B: __dl__ZN10Properties9get_pathsERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEEbPm (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404172B: __dl__ZN6Config18read_binary_configEPKcS1_bPPKS_PNSt3__112basic_stringIcNS5_11char_traitsIcEENS5_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x40387E7: __dl__Z23init_default_namespacesPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x4081243: __dl__ZL29__linker_init_post_relocationR19KernelArgumentBlockR6soinfo (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x408041F: __dl___linker_init (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404CC37: __dl__start (in /apex/com.android.runtime/bin/linker64)
+==18490== 
+==18490== Conditional jump or move depends on uninitialised value(s)
+==18490==    at 0x40BE52C: __dl__ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404BDD7: __dl__Z14normalize_pathPKcPNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404C4DF: __dl__Z12resolve_pathRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404223B: __dl__ZN10Properties9get_pathsERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEEbPm (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404172B: __dl__ZN6Config18read_binary_configEPKcS1_bPPKS_PNSt3__112basic_stringIcNS5_11char_traitsIcEENS5_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x40387E7: __dl__Z23init_default_namespacesPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x4081243: __dl__ZL29__linker_init_post_relocationR19KernelArgumentBlockR6soinfo (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x408041F: __dl___linker_init (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404CC37: __dl__start (in /apex/com.android.runtime/bin/linker64)
+==18490== 
+==18490== Conditional jump or move depends on uninitialised value(s)
+==18490==    at 0x40C091C: __dl_memcpy (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x40BE54B: __dl__ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404BDD7: __dl__Z14normalize_pathPKcPNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404C4DF: __dl__Z12resolve_pathRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404223B: __dl__ZN10Properties9get_pathsERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEEbPm (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404172B: __dl__ZN6Config18read_binary_configEPKcS1_bPPKS_PNSt3__112basic_stringIcNS5_11char_traitsIcEENS5_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x40387E7: __dl__Z23init_default_namespacesPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x4081243: __dl__ZL29__linker_init_post_relocationR19KernelArgumentBlockR6soinfo (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x408041F: __dl___linker_init (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404CC37: __dl__start (in /apex/com.android.runtime/bin/linker64)
+==18490== 
+==18490== Conditional jump or move depends on uninitialised value(s)
+==18490==    at 0x40C09D0: __dl___memcpy (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x40BE54B: __dl__ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404BDD7: __dl__Z14normalize_pathPKcPNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404C4DF: __dl__Z12resolve_pathRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404223B: __dl__ZN10Properties9get_pathsERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEEbPm (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404172B: __dl__ZN6Config18read_binary_configEPKcS1_bPPKS_PNSt3__112basic_stringIcNS5_11char_traitsIcEENS5_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x40387E7: __dl__Z23init_default_namespacesPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x4081243: __dl__ZL29__linker_init_post_relocationR19KernelArgumentBlockR6soinfo (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x408041F: __dl___linker_init (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404CC37: __dl__start (in /apex/com.android.runtime/bin/linker64)
+==18490== 
+==18490== Conditional jump or move depends on uninitialised value(s)
+==18490==    at 0x40C0A14: __dl___memcpy (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x40BE54B: __dl__ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404BDD7: __dl__Z14normalize_pathPKcPNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404C4DF: __dl__Z12resolve_pathRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404223B: __dl__ZN10Properties9get_pathsERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEEbPm (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404172B: __dl__ZN6Config18read_binary_configEPKcS1_bPPKS_PNSt3__112basic_stringIcNS5_11char_traitsIcEENS5_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x40387E7: __dl__Z23init_default_namespacesPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x4081243: __dl__ZL29__linker_init_post_relocationR19KernelArgumentBlockR6soinfo (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x408041F: __dl___linker_init (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404CC37: __dl__start (in /apex/com.android.runtime/bin/linker64)
+==18490== 
+==18490== Use of uninitialised value of size 8
+==18490==    at 0x40C0A1C: __dl___memcpy (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x40BE54B: __dl__ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404BDD7: __dl__Z14normalize_pathPKcPNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404C4DF: __dl__Z12resolve_pathRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404223B: __dl__ZN10Properties9get_pathsERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEEbPm (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404172B: __dl__ZN6Config18read_binary_configEPKcS1_bPPKS_PNSt3__112basic_stringIcNS5_11char_traitsIcEENS5_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x40387E7: __dl__Z23init_default_namespacesPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x4081243: __dl__ZL29__linker_init_post_relocationR19KernelArgumentBlockR6soinfo (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x408041F: __dl___linker_init (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404CC37: __dl__start (in /apex/com.android.runtime/bin/linker64)
+==18490== 
+==18490== Use of uninitialised value of size 8
+==18490==    at 0x40C0A24: __dl___memcpy (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x40BE54B: __dl__ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404BDD7: __dl__Z14normalize_pathPKcPNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404C4DF: __dl__Z12resolve_pathRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404223B: __dl__ZN10Properties9get_pathsERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEEbPm (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404172B: __dl__ZN6Config18read_binary_configEPKcS1_bPPKS_PNSt3__112basic_stringIcNS5_11char_traitsIcEENS5_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x40387E7: __dl__Z23init_default_namespacesPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x4081243: __dl__ZL29__linker_init_post_relocationR19KernelArgumentBlockR6soinfo (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x408041F: __dl___linker_init (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404CC37: __dl__start (in /apex/com.android.runtime/bin/linker64)
+==18490== 
+==18490== Use of uninitialised value of size 8
+==18490==    at 0x40BE54C: __dl__ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404BDD7: __dl__Z14normalize_pathPKcPNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404C4DF: __dl__Z12resolve_pathRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404223B: __dl__ZN10Properties9get_pathsERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEEbPm (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404172B: __dl__ZN6Config18read_binary_configEPKcS1_bPPKS_PNSt3__112basic_stringIcNS5_11char_traitsIcEENS5_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x40387E7: __dl__Z23init_default_namespacesPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x4081243: __dl__ZL29__linker_init_post_relocationR19KernelArgumentBlockR6soinfo (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x408041F: __dl___linker_init (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404CC37: __dl__start (in /apex/com.android.runtime/bin/linker64)
+==18490== 
+==18490== Conditional jump or move depends on uninitialised value(s)
+==18490==    at 0x40C1320: __dl_strlen_default (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x40BE4CF: __dl__ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404BDD7: __dl__Z14normalize_pathPKcPNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404BF63: __dl__Z14parse_zip_pathPKcPNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES8_ (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404C517: __dl__Z12resolve_pathRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404223B: __dl__ZN10Properties9get_pathsERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEEbPm (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404172B: __dl__ZN6Config18read_binary_configEPKcS1_bPPKS_PNSt3__112basic_stringIcNS5_11char_traitsIcEENS5_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x40387E7: __dl__Z23init_default_namespacesPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x4081243: __dl__ZL29__linker_init_post_relocationR19KernelArgumentBlockR6soinfo (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x408041F: __dl___linker_init (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404CC37: __dl__start (in /apex/com.android.runtime/bin/linker64)
+==18490== 
+==18490== Conditional jump or move depends on uninitialised value(s)
+==18490==    at 0x40BE4E0: __dl__ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404BDD7: __dl__Z14normalize_pathPKcPNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404BF63: __dl__Z14parse_zip_pathPKcPNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES8_ (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404C517: __dl__Z12resolve_pathRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404223B: __dl__ZN10Properties9get_pathsERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEEbPm (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404172B: __dl__ZN6Config18read_binary_configEPKcS1_bPPKS_PNSt3__112basic_stringIcNS5_11char_traitsIcEENS5_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x40387E7: __dl__Z23init_default_namespacesPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x4081243: __dl__ZL29__linker_init_post_relocationR19KernelArgumentBlockR6soinfo (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x408041F: __dl___linker_init (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404CC37: __dl__start (in /apex/com.android.runtime/bin/linker64)
+==18490== 
+==18490== Conditional jump or move depends on uninitialised value(s)
+==18490==    at 0x40BE52C: __dl__ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404BDD7: __dl__Z14normalize_pathPKcPNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404BF63: __dl__Z14parse_zip_pathPKcPNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES8_ (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404C517: __dl__Z12resolve_pathRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404223B: __dl__ZN10Properties9get_pathsERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEEbPm (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404172B: __dl__ZN6Config18read_binary_configEPKcS1_bPPKS_PNSt3__112basic_stringIcNS5_11char_traitsIcEENS5_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x40387E7: __dl__Z23init_default_namespacesPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x4081243: __dl__ZL29__linker_init_post_relocationR19KernelArgumentBlockR6soinfo (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x408041F: __dl___linker_init (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404CC37: __dl__start (in /apex/com.android.runtime/bin/linker64)
+==18490== 
+==18490== Conditional jump or move depends on uninitialised value(s)
+==18490==    at 0x40C091C: __dl_memcpy (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x40BE54B: __dl__ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404BDD7: __dl__Z14normalize_pathPKcPNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404BF63: __dl__Z14parse_zip_pathPKcPNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES8_ (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404C517: __dl__Z12resolve_pathRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404223B: __dl__ZN10Properties9get_pathsERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEEbPm (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404172B: __dl__ZN6Config18read_binary_configEPKcS1_bPPKS_PNSt3__112basic_stringIcNS5_11char_traitsIcEENS5_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x40387E7: __dl__Z23init_default_namespacesPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x4081243: __dl__ZL29__linker_init_post_relocationR19KernelArgumentBlockR6soinfo (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x408041F: __dl___linker_init (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404CC37: __dl__start (in /apex/com.android.runtime/bin/linker64)
+==18490== 
+==18490== Conditional jump or move depends on uninitialised value(s)
+==18490==    at 0x40C09D0: __dl___memcpy (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x40BE54B: __dl__ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404BDD7: __dl__Z14normalize_pathPKcPNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404BF63: __dl__Z14parse_zip_pathPKcPNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES8_ (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404C517: __dl__Z12resolve_pathRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404223B: __dl__ZN10Properties9get_pathsERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEEbPm (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404172B: __dl__ZN6Config18read_binary_configEPKcS1_bPPKS_PNSt3__112basic_stringIcNS5_11char_traitsIcEENS5_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x40387E7: __dl__Z23init_default_namespacesPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x4081243: __dl__ZL29__linker_init_post_relocationR19KernelArgumentBlockR6soinfo (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x408041F: __dl___linker_init (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404CC37: __dl__start (in /apex/com.android.runtime/bin/linker64)
+==18490== 
+==18490== Conditional jump or move depends on uninitialised value(s)
+==18490==    at 0x40C0A14: __dl___memcpy (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x40BE54B: __dl__ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404BDD7: __dl__Z14normalize_pathPKcPNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404BF63: __dl__Z14parse_zip_pathPKcPNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES8_ (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404C517: __dl__Z12resolve_pathRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404223B: __dl__ZN10Properties9get_pathsERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEEbPm (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404172B: __dl__ZN6Config18read_binary_configEPKcS1_bPPKS_PNSt3__112basic_stringIcNS5_11char_traitsIcEENS5_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x40387E7: __dl__Z23init_default_namespacesPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x4081243: __dl__ZL29__linker_init_post_relocationR19KernelArgumentBlockR6soinfo (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x408041F: __dl___linker_init (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404CC37: __dl__start (in /apex/com.android.runtime/bin/linker64)
+==18490== 
+==18490== Use of uninitialised value of size 8
+==18490==    at 0x40C0A1C: __dl___memcpy (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x40BE54B: __dl__ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404BDD7: __dl__Z14normalize_pathPKcPNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404BF63: __dl__Z14parse_zip_pathPKcPNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES8_ (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404C517: __dl__Z12resolve_pathRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404223B: __dl__ZN10Properties9get_pathsERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEEbPm (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404172B: __dl__ZN6Config18read_binary_configEPKcS1_bPPKS_PNSt3__112basic_stringIcNS5_11char_traitsIcEENS5_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x40387E7: __dl__Z23init_default_namespacesPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x4081243: __dl__ZL29__linker_init_post_relocationR19KernelArgumentBlockR6soinfo (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x408041F: __dl___linker_init (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404CC37: __dl__start (in /apex/com.android.runtime/bin/linker64)
+==18490== 
+==18490== Use of uninitialised value of size 8
+==18490==    at 0x40C0A24: __dl___memcpy (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x40BE54B: __dl__ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404BDD7: __dl__Z14normalize_pathPKcPNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404BF63: __dl__Z14parse_zip_pathPKcPNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES8_ (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404C517: __dl__Z12resolve_pathRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404223B: __dl__ZN10Properties9get_pathsERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEEbPm (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404172B: __dl__ZN6Config18read_binary_configEPKcS1_bPPKS_PNSt3__112basic_stringIcNS5_11char_traitsIcEENS5_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x40387E7: __dl__Z23init_default_namespacesPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x4081243: __dl__ZL29__linker_init_post_relocationR19KernelArgumentBlockR6soinfo (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x408041F: __dl___linker_init (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404CC37: __dl__start (in /apex/com.android.runtime/bin/linker64)
+==18490== 
+==18490== Use of uninitialised value of size 8
+==18490==    at 0x40BE54C: __dl__ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404BDD7: __dl__Z14normalize_pathPKcPNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404BF63: __dl__Z14parse_zip_pathPKcPNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES8_ (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404C517: __dl__Z12resolve_pathRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404223B: __dl__ZN10Properties9get_pathsERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEEbPm (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404172B: __dl__ZN6Config18read_binary_configEPKcS1_bPPKS_PNSt3__112basic_stringIcNS5_11char_traitsIcEENS5_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x40387E7: __dl__Z23init_default_namespacesPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x4081243: __dl__ZL29__linker_init_post_relocationR19KernelArgumentBlockR6soinfo (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x408041F: __dl___linker_init (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404CC37: __dl__start (in /apex/com.android.runtime/bin/linker64)
+==18490== 
+==18490== Conditional jump or move depends on uninitialised value(s)
+==18490==    at 0x40D08AC: __dl_strstr (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404BFB3: __dl__Z14parse_zip_pathPKcPNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES8_ (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404C517: __dl__Z12resolve_pathRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404223B: __dl__ZN10Properties9get_pathsERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEEbPm (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404172B: __dl__ZN6Config18read_binary_configEPKcS1_bPPKS_PNSt3__112basic_stringIcNS5_11char_traitsIcEENS5_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x40387E7: __dl__Z23init_default_namespacesPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x4081243: __dl__ZL29__linker_init_post_relocationR19KernelArgumentBlockR6soinfo (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x408041F: __dl___linker_init (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404CC37: __dl__start (in /apex/com.android.runtime/bin/linker64)
+==18490== 
+==18490== Conditional jump or move depends on uninitialised value(s)
+==18490==    at 0x404BFB4: __dl__Z14parse_zip_pathPKcPNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES8_ (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404C517: __dl__Z12resolve_pathRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404223B: __dl__ZN10Properties9get_pathsERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEEbPm (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404172B: __dl__ZN6Config18read_binary_configEPKcS1_bPPKS_PNSt3__112basic_stringIcNS5_11char_traitsIcEENS5_9allocatorIcEEEE (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x40387E7: __dl__Z23init_default_namespacesPKc (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x4081243: __dl__ZL29__linker_init_post_relocationR19KernelArgumentBlockR6soinfo (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x408041F: __dl___linker_init (in /apex/com.android.runtime/bin/linker64)
+==18490==    by 0x404CC37: __dl__start (in /apex/com.android.runtime/bin/linker64)
+==18490== 
+
+valgrind: /home/builder/.termux-build/valgrind/src/coregrind/m_redir.c:773 (void vgPlain_redir_add_ifunc_target(Addr, Addr)): Assertion 'old' failed.
+
+host stacktrace:
+==18490==    at 0x5802D88C: ??? (in /data/data/com.termux/files/usr/libexec/valgrind/memcheck-arm64-linux)
+==18490==    by 0x5802DBC7: ??? (in /data/data/com.termux/files/usr/libexec/valgrind/memcheck-arm64-linux)
+==18490==    by 0x5802DBA3: ??? (in /data/data/com.termux/files/usr/libexec/valgrind/memcheck-arm64-linux)
+==18490==    by 0x5804151B: ??? (in /data/data/com.termux/files/usr/libexec/valgrind/memcheck-arm64-linux)
+==18490==    by 0x58093343: ??? (in /data/data/com.termux/files/usr/libexec/valgrind/memcheck-arm64-linux)
+==18490==    by 0x580A2AA3: ??? (in /data/data/com.termux/files/usr/libexec/valgrind/memcheck-arm64-linux)
+==18490==    by 0xFFFFFFFFFFFFFFFF: ???
+
+sched status:
+  running_tid=1
+
+Thread 1: status = VgTs_Runnable (lwpid 18490)
+==18490==    at 0x5CBB488: ??? (in /data/data/com.termux/files/usr/libexec/valgrind/vgpreload_core-arm64-linux.so)
+client stack range: [0x1FFEFF9000 0x1FFF000FFF] client SP: 0x1FFEFFD0C0
+valgrind stack range: [0x1002AB8000 0x1002BB7FFF] top usage: 14480 of 1048576
+
+
+Note: see also the FAQ in the source distribution.
+It contains workarounds to several common problems.
+In particular, if Valgrind aborted or crashed after
+identifying problems in your program, there's a good chance
+that fixing those problems will prevent Valgrind aborting or
+crashing, especially if it happened in m_mallocfree.c.
+
+If that doesn't help, please report this bug to: www.valgrind.org
+
+In the bug report, send all the above text, the valgrind
+version, and what OS and version you are using.  Thanks.
+
