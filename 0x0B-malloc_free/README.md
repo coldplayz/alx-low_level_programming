@@ -7,4 +7,7 @@
 2-str_concat.c
 * concatenates two strings
 
+3-alloc_grid.c
+* returns a pointer to a 2 dimensional array of integers.
+
 
