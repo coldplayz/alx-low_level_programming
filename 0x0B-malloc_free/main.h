@@ -81,6 +81,7 @@ void set_string(char **s, char *to);
 void swap_int(int *a, int *b);
 void times_table(void);
 char *create_array(unsigned int size, char c);
+char *_strdup(char *str);
 
 
 #endif /* MAIN_H */
