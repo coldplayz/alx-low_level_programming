@@ -25,6 +25,10 @@ char **strtow(char *str)
 			word_num++;
 		}
 	}
+	if (word_num == 0)
+	{
+		return (NULL);
+	}
 	pti = malloc((word_num + 1) * sizeof(int));
 
 	for (i = 0; *(str + i); i++)
