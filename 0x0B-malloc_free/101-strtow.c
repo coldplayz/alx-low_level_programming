@@ -25,26 +25,25 @@ char **strtow(char *str)
 			word_num++;
 		}
 	}
+	printf("word_num: %d\n", word_num);
 	pti = malloc((word_num + 1) * sizeof(int));
 
 	for (i = 0; *(str + i); i++)
 	{
 		if (*(str + i) == ' ')
 		{
-			/*for summing total number of words on encountering a space*/
-			/*character, if the space character is not the first character*/
-			/*of the string*/
+			/*for summing total number of non-space characters*/
+			/*of str, including a null character for each word*/
 			if (((str + i) != str) && (*(str + i - 1) != ' '))
 			{
 				sum += count + 1;
 				if (pti_count == 0)
 				{
 					*(pti + pti_count) = 0;
-					*(pti + pti_count + 1) = 0 + count + 1;
 				}
 				else
 				{
-					*(pti + pti_count + 1) = count + 1 + *(pti + pti_count);
+					*(pti + pti_count) = count + 1 + *(pti + pti_count - 1);
 				}
 				pti_count++;
 				count = 0;
@@ -55,14 +54,27 @@ char **strtow(char *str)
 			count++;
 		}
 	}
-	sum += count + 1;
-	*(pti + pti_count + 1) = count + 1 + *(pti + pti_count);
+	/*only do if last (not null-character terminator)*/
+	/*character of string is not space*/
+	if (*(str + i - 1) != ' ')
+	{
+		sum += count + 1;
+		printf("sum: %d\n", sum);
+		*(pti + pti_count + 1) = count + 1 + *(pti + pti_count);
+	}
+	for (i = 0; i < (word_num + 1); i++)
+	{
+		printf("pti[%d]: %d\n", i, pti[i]);
+	}
 
 	ptp = malloc(((word_num + 1) * sizeof(char *)) + (sum * sizeof(char)));
+	printf("Passed malloc call statement\n");
 	if (ptp == NULL)
 	{
+		printf("Insufficient memory\n");
 		return (NULL);
 	}
+	printf("size of malloced space: %d\n", (int)((&ptp)[1] - ptp));
 
 	ptc = (char *)(ptp + (word_num + 1));
 	for (i = 0; i < (word_num); i++)
@@ -94,6 +106,7 @@ char **strtow(char *str)
 		*(ptp[ptp_row_index] + ptp_column_index) = '\0';
 	}
 	*(ptp + word_num) = NULL;
+	free(pti);
 
 	return (ptp);
 }
