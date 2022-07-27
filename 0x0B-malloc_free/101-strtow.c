@@ -42,7 +42,7 @@ char **strtow(char *str)
 				}
 				else
 				{
-					*(pti + pti_count) = count + 1 + *(pti + pti_count - 1);
+					*(pti + pti_count) = sum - count - 1;
 				}
 				pti_count++;
 				count = 0;
@@ -55,10 +55,10 @@ char **strtow(char *str)
 	}
 	/*only do if last (not null-character terminator)*/
 	/*character of string is not space*/
-	if (*(str + i - 1) != ' ')
+	if ((*(str + i - 1) != ' '))
 	{
 		sum += count + 1;
-		*(pti + pti_count + 1) = count + 1 + *(pti + pti_count);
+		*(pti + pti_count) = count + 1 + *(pti + pti_count);
 	}
 
 	ptp = malloc(((word_num + 1) * sizeof(char *)) + (sum * sizeof(char)));
