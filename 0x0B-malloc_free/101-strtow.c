@@ -25,7 +25,6 @@ char **strtow(char *str)
 			word_num++;
 		}
 	}
-	printf("word_num: %d\n", word_num);
 	pti = malloc((word_num + 1) * sizeof(int));
 
 	for (i = 0; *(str + i); i++)
@@ -59,22 +58,14 @@ char **strtow(char *str)
 	if (*(str + i - 1) != ' ')
 	{
 		sum += count + 1;
-		printf("sum: %d\n", sum);
 		*(pti + pti_count + 1) = count + 1 + *(pti + pti_count);
-	}
-	for (i = 0; i < (word_num + 1); i++)
-	{
-		printf("pti[%d]: %d\n", i, pti[i]);
 	}
 
 	ptp = malloc(((word_num + 1) * sizeof(char *)) + (sum * sizeof(char)));
-	printf("Passed malloc call statement\n");
 	if (ptp == NULL)
 	{
-		printf("Insufficient memory\n");
 		return (NULL);
 	}
-	printf("size of malloced space: %d\n", (int)((&ptp)[1] - ptp));
 
 	ptc = (char *)(ptp + (word_num + 1));
 	for (i = 0; i < (word_num); i++)
