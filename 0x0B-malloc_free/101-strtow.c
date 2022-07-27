@@ -58,7 +58,7 @@ char **strtow(char *str)
 	if ((*(str + i - 1) != ' '))
 	{
 		sum += count + 1;
-		*(pti + pti_count) = count + 1 + *(pti + pti_count);
+		*(pti + pti_count) = sum - count - 1;
 	}
 
 	ptp = malloc(((word_num + 1) * sizeof(char *)) + (sum * sizeof(char)));
