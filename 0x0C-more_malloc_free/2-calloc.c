@@ -25,7 +25,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	}
 	/*pti = (int *)ptv;*/
-	printf("malloc successful\n");
 
 	for (i = 0; i < (nmemb * size); i++)
 	{
