@@ -13,4 +13,5 @@
 100-realloc.c
 *  reallocates a memory block using malloc and free
 
-
+101-mul.c
+* multiplies two positive numbers
