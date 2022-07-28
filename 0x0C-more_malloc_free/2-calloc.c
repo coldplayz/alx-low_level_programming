@@ -27,7 +27,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	for (i = 0; i < (nmemb * size); i++)
 	{
-		*((int *)ptv + i) = 0;
+		*((char *)ptv + i) = 0;
 	}
 	/*ptv = (void *)pti;*/
 
