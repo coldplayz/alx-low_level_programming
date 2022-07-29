@@ -93,6 +93,11 @@ void *_calloc(unsigned int nmemb, unsigned int size);
 int *array_range(int min, int max);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 void _memncpy(void *dest, void *src, unsigned int n);
+char *add_rev_str(char *str1, char *str2, int len1);
+int _atoi2(char c);
+char *strdup2(char *str);
+char *rev_add_rev(char *s1, char *s2);
+
 
 
 
