@@ -4,18 +4,21 @@
 
 int main()
 {
+	//int i;
 	char *res;
-	char *s1 = "998";
-	char *s2 = "200000000";
+	char *s2 = "66533689987223998456872";
+	char *s1 = "225649980007";
 
-	//res = add_rev_str(s1, s2, 23);
-	//rev_string(res);
-	
-	res = rev_add_rev(s1, s2);
+	res = rev_mult_rev(s1, s2);
 
-	printf("s1: %s\n", s1);
-	printf("s2: %s\n", s2);
-	printf("res: %s\n", res);
+	/*
+	for (i = 0; i < 4; i++)
+	{
+		printf("res[%d]: %s\n", i, res[i]);
+	}
+	*/
+	printf("Product of %s and %s: %s\n", s1, s2, res);
+
 	free(res);
 
 	return (0);
