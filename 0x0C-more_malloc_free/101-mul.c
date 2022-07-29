@@ -270,6 +270,7 @@ int _atoi2(char c)
 			return (i);
 		}
 	}
+	return (0);
 }
 
 
