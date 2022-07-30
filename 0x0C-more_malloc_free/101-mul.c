@@ -32,13 +32,19 @@ int main(int ac, char **av)
 	}
 	prod = rev_mult_rev(av[1], av[2]);
 
-	if (prod[0] == '0')
+	for (i = 0; prod[i]; i++)
 	{
-		_puts(prod + 1);
+		if (prod[i] != '0')
+		{
+			_puts((prod + i));
+			return (0);
+		}
 	}
-	else
+
+	if (prod[i] == 0)
 	{
-		_puts(prod);
+		_putchar('0');
+		_putchar('\n');
 	}
 
 	return (0);
