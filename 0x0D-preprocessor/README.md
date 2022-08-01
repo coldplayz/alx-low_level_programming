@@ -10,4 +10,7 @@
 3-function_like_macro.h
 * computes the absolute value of a number
 
+4-sum.h
+* defines a macro to calculate the sum of to numbers
+
 
