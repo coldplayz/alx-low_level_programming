@@ -4,4 +4,7 @@ dog.h
 1-init_dog.c
 * initializes a variable of type _struct dog_ 
 
+2-print_dog.c
+* prints the attributes of the struct dog
+
 
