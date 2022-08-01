@@ -7,4 +7,7 @@
 2-main.c
 * prints the name of the source file of this program
 
+3-function_like_macro.h
+* computes the absolute value of a number
+
 
