@@ -20,19 +20,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	ptr->name = malloc(sizeof(char *));
-	if (ptr->name != NULL)
-	{
-		ptr->name = name;
-	}
+	/*ptr->name = malloc(sizeof(char *));*/
+	ptr->name = name;
 
 	ptr->age = age;
 
-	ptr->owner = malloc(sizeof(char *));
-	if (ptr->owner != NULL)
-	{
-		ptr->owner = owner;
-	}
+	/*ptr->owner = malloc(sizeof(char *));*/
+
+	ptr->owner = owner;
 
 	return (ptr);
 }
