@@ -7,4 +7,7 @@ dog.h
 2-print_dog.c
 * prints the attributes of the struct dog
 
+4-new_dog.c
+* creates a new dog
+
 
