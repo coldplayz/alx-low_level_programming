@@ -1,14 +1,24 @@
-==391504== Memcheck, a memory error detector
-==391504== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==391504== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==391504== Command: ./a.out
-==391504== 
-==391504== 
-==391504== HEAP SUMMARY:
-==391504==     in use at exit: 0 bytes in 0 blocks
-==391504==   total heap usage: 1 allocs, 1 frees, 1,024 bytes allocated
-==391504== 
-==391504== All heap blocks were freed -- no leaks are possible
-==391504== 
-==391504== For lists of detected and suppressed errors, rerun with: -s
-==391504== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==392649== Memcheck, a memory error detector
+==392649== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==392649== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==392649== Command: ./a.out
+==392649== 
+==392649== 
+==392649== HEAP SUMMARY:
+==392649==     in use at exit: 34 bytes in 3 blocks
+==392649==   total heap usage: 4 allocs, 1 frees, 1,058 bytes allocated
+==392649== 
+==392649== 34 (24 direct, 10 indirect) bytes in 1 blocks are definitely lost in loss record 3 of 3
+==392649==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==392649==    by 0x109205: new_dog (4-new_dog.c:17)
+==392649==    by 0x1091AF: main (4-main.c:13)
+==392649== 
+==392649== LEAK SUMMARY:
+==392649==    definitely lost: 24 bytes in 1 blocks
+==392649==    indirectly lost: 10 bytes in 2 blocks
+==392649==      possibly lost: 0 bytes in 0 blocks
+==392649==    still reachable: 0 bytes in 0 blocks
+==392649==         suppressed: 0 bytes in 0 blocks
+==392649== 
+==392649== For lists of detected and suppressed errors, rerun with: -s
+==392649== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
