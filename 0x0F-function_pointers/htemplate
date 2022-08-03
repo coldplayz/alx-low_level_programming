@@ -1,6 +1,4 @@
 #include <stdlib.h>
 #include "function_pointers.h"
-#define IFNULL(ptf, ptc, size) do if (((ptf) == NULL) || ((ptc) == NULL))	\
-				{					\
-					exit(EXIT_SUCCESS);		\
-				} while (0)
+#define IFNULL(ptf, ptc) (((ptf) == NULL) || ((ptc) == NULL))
+#define EXIT() exit(EXIT_SUCCESS)
