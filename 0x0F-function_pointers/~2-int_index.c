@@ -1,5 +1,7 @@
 #include <stdlib.h>
 #include "function_pointers.h"
+#define IFNULL(ptf, ptc) (((ptf) == NULL) || ((ptc) == NULL))
+#define EXIT() exit(EXIT_SUCCESS)
 
 /**
  * int_index - searches for an integer
@@ -14,9 +16,9 @@ int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i;
 
-	if ((cmp == NULL) || (array == NULL))
+	if (IFNULL(cmp, array))
 	{
-		exit(EXIT_SUCCESS);
+		EXIT();
 	}
 
 	if (size <= 0)
