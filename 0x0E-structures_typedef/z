@@ -1,24 +1,416 @@
-==392649== Memcheck, a memory error detector
-==392649== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==392649== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==392649== Command: ./a.out
-==392649== 
-==392649== 
-==392649== HEAP SUMMARY:
-==392649==     in use at exit: 34 bytes in 3 blocks
-==392649==   total heap usage: 4 allocs, 1 frees, 1,058 bytes allocated
-==392649== 
-==392649== 34 (24 direct, 10 indirect) bytes in 1 blocks are definitely lost in loss record 3 of 3
-==392649==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
-==392649==    by 0x109205: new_dog (4-new_dog.c:17)
-==392649==    by 0x1091AF: main (4-main.c:13)
-==392649== 
-==392649== LEAK SUMMARY:
-==392649==    definitely lost: 24 bytes in 1 blocks
-==392649==    indirectly lost: 10 bytes in 2 blocks
-==392649==      possibly lost: 0 bytes in 0 blocks
-==392649==    still reachable: 0 bytes in 0 blocks
-==392649==         suppressed: 0 bytes in 0 blocks
-==392649== 
-==392649== For lists of detected and suppressed errors, rerun with: -s
-==392649== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+
+a.out:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+0000000000001000 <_init>:
+    1000:	f3 0f 1e fa          	endbr64 
+    1004:	48 83 ec 08          	sub    $0x8,%rsp
+    1008:	48 8b 05 d9 2f 00 00 	mov    0x2fd9(%rip),%rax        # 3fe8 <__gmon_start__>
+    100f:	48 85 c0             	test   %rax,%rax
+    1012:	74 02                	je     1016 <_init+0x16>
+    1014:	ff d0                	callq  *%rax
+    1016:	48 83 c4 08          	add    $0x8,%rsp
+    101a:	c3                   	retq   
+
+Disassembly of section .plt:
+
+0000000000001020 <.plt>:
+    1020:	ff 35 8a 2f 00 00    	pushq  0x2f8a(%rip)        # 3fb0 <_GLOBAL_OFFSET_TABLE_+0x8>
+    1026:	f2 ff 25 8b 2f 00 00 	bnd jmpq *0x2f8b(%rip)        # 3fb8 <_GLOBAL_OFFSET_TABLE_+0x10>
+    102d:	0f 1f 00             	nopl   (%rax)
+    1030:	f3 0f 1e fa          	endbr64 
+    1034:	68 00 00 00 00       	pushq  $0x0
+    1039:	f2 e9 e1 ff ff ff    	bnd jmpq 1020 <.plt>
+    103f:	90                   	nop
+    1040:	f3 0f 1e fa          	endbr64 
+    1044:	68 01 00 00 00       	pushq  $0x1
+    1049:	f2 e9 d1 ff ff ff    	bnd jmpq 1020 <.plt>
+    104f:	90                   	nop
+    1050:	f3 0f 1e fa          	endbr64 
+    1054:	68 02 00 00 00       	pushq  $0x2
+    1059:	f2 e9 c1 ff ff ff    	bnd jmpq 1020 <.plt>
+    105f:	90                   	nop
+
+Disassembly of section .plt.got:
+
+0000000000001060 <__cxa_finalize@plt>:
+    1060:	f3 0f 1e fa          	endbr64 
+    1064:	f2 ff 25 8d 2f 00 00 	bnd jmpq *0x2f8d(%rip)        # 3ff8 <__cxa_finalize@GLIBC_2.2.5>
+    106b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+Disassembly of section .plt.sec:
+
+0000000000001070 <free@plt>:
+    1070:	f3 0f 1e fa          	endbr64 
+    1074:	f2 ff 25 45 2f 00 00 	bnd jmpq *0x2f45(%rip)        # 3fc0 <free@GLIBC_2.2.5>
+    107b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+0000000000001080 <printf@plt>:
+    1080:	f3 0f 1e fa          	endbr64 
+    1084:	f2 ff 25 3d 2f 00 00 	bnd jmpq *0x2f3d(%rip)        # 3fc8 <printf@GLIBC_2.2.5>
+    108b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+0000000000001090 <malloc@plt>:
+    1090:	f3 0f 1e fa          	endbr64 
+    1094:	f2 ff 25 35 2f 00 00 	bnd jmpq *0x2f35(%rip)        # 3fd0 <malloc@GLIBC_2.2.5>
+    109b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+Disassembly of section .text:
+
+00000000000010a0 <_start>:
+    10a0:	f3 0f 1e fa          	endbr64 
+    10a4:	31 ed                	xor    %ebp,%ebp
+    10a6:	49 89 d1             	mov    %rdx,%r9
+    10a9:	5e                   	pop    %rsi
+    10aa:	48 89 e2             	mov    %rsp,%rdx
+    10ad:	48 83 e4 f0          	and    $0xfffffffffffffff0,%rsp
+    10b1:	50                   	push   %rax
+    10b2:	54                   	push   %rsp
+    10b3:	4c 8d 05 26 03 00 00 	lea    0x326(%rip),%r8        # 13e0 <__libc_csu_fini>
+    10ba:	48 8d 0d af 02 00 00 	lea    0x2af(%rip),%rcx        # 1370 <__libc_csu_init>
+    10c1:	48 8d 3d c1 00 00 00 	lea    0xc1(%rip),%rdi        # 1189 <main>
+    10c8:	ff 15 12 2f 00 00    	callq  *0x2f12(%rip)        # 3fe0 <__libc_start_main@GLIBC_2.2.5>
+    10ce:	f4                   	hlt    
+    10cf:	90                   	nop
+
+00000000000010d0 <deregister_tm_clones>:
+    10d0:	48 8d 3d 39 2f 00 00 	lea    0x2f39(%rip),%rdi        # 4010 <__TMC_END__>
+    10d7:	48 8d 05 32 2f 00 00 	lea    0x2f32(%rip),%rax        # 4010 <__TMC_END__>
+    10de:	48 39 f8             	cmp    %rdi,%rax
+    10e1:	74 15                	je     10f8 <deregister_tm_clones+0x28>
+    10e3:	48 8b 05 ee 2e 00 00 	mov    0x2eee(%rip),%rax        # 3fd8 <_ITM_deregisterTMCloneTable>
+    10ea:	48 85 c0             	test   %rax,%rax
+    10ed:	74 09                	je     10f8 <deregister_tm_clones+0x28>
+    10ef:	ff e0                	jmpq   *%rax
+    10f1:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+    10f8:	c3                   	retq   
+    10f9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000001100 <register_tm_clones>:
+    1100:	48 8d 3d 09 2f 00 00 	lea    0x2f09(%rip),%rdi        # 4010 <__TMC_END__>
+    1107:	48 8d 35 02 2f 00 00 	lea    0x2f02(%rip),%rsi        # 4010 <__TMC_END__>
+    110e:	48 29 fe             	sub    %rdi,%rsi
+    1111:	48 89 f0             	mov    %rsi,%rax
+    1114:	48 c1 ee 3f          	shr    $0x3f,%rsi
+    1118:	48 c1 f8 03          	sar    $0x3,%rax
+    111c:	48 01 c6             	add    %rax,%rsi
+    111f:	48 d1 fe             	sar    %rsi
+    1122:	74 14                	je     1138 <register_tm_clones+0x38>
+    1124:	48 8b 05 c5 2e 00 00 	mov    0x2ec5(%rip),%rax        # 3ff0 <_ITM_registerTMCloneTable>
+    112b:	48 85 c0             	test   %rax,%rax
+    112e:	74 08                	je     1138 <register_tm_clones+0x38>
+    1130:	ff e0                	jmpq   *%rax
+    1132:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+    1138:	c3                   	retq   
+    1139:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000001140 <__do_global_dtors_aux>:
+    1140:	f3 0f 1e fa          	endbr64 
+    1144:	80 3d c5 2e 00 00 00 	cmpb   $0x0,0x2ec5(%rip)        # 4010 <__TMC_END__>
+    114b:	75 2b                	jne    1178 <__do_global_dtors_aux+0x38>
+    114d:	55                   	push   %rbp
+    114e:	48 83 3d a2 2e 00 00 	cmpq   $0x0,0x2ea2(%rip)        # 3ff8 <__cxa_finalize@GLIBC_2.2.5>
+    1155:	00 
+    1156:	48 89 e5             	mov    %rsp,%rbp
+    1159:	74 0c                	je     1167 <__do_global_dtors_aux+0x27>
+    115b:	48 8b 3d a6 2e 00 00 	mov    0x2ea6(%rip),%rdi        # 4008 <__dso_handle>
+    1162:	e8 f9 fe ff ff       	callq  1060 <__cxa_finalize@plt>
+    1167:	e8 64 ff ff ff       	callq  10d0 <deregister_tm_clones>
+    116c:	c6 05 9d 2e 00 00 01 	movb   $0x1,0x2e9d(%rip)        # 4010 <__TMC_END__>
+    1173:	5d                   	pop    %rbp
+    1174:	c3                   	retq   
+    1175:	0f 1f 00             	nopl   (%rax)
+    1178:	c3                   	retq   
+    1179:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000001180 <frame_dummy>:
+    1180:	f3 0f 1e fa          	endbr64 
+    1184:	e9 77 ff ff ff       	jmpq   1100 <register_tm_clones>
+
+0000000000001189 <main>:
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    1189:	f3 0f 1e fa          	endbr64 
+    118d:	55                   	push   %rbp
+    118e:	48 89 e5             	mov    %rsp,%rbp
+    1191:	48 83 ec 10          	sub    $0x10,%rsp
+    dog_t *my_dog;
+
+    my_dog = new_dog("Poppy", 3.5, "Bob");
+    1195:	48 8d 35 6c 0e 00 00 	lea    0xe6c(%rip),%rsi        # 2008 <_IO_stdin_used+0x8>
+    119c:	f3 0f 10 05 a0 0e 00 	movss  0xea0(%rip),%xmm0        # 2044 <_IO_stdin_used+0x44>
+    11a3:	00 
+    11a4:	48 8d 3d 61 0e 00 00 	lea    0xe61(%rip),%rdi        # 200c <_IO_stdin_used+0xc>
+    11ab:	e8 33 00 00 00       	callq  11e3 <new_dog>
+    11b0:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
+    printf("My name is %s, and I am %.1f :) - Woof!\n", my_dog->name, my_dog->age);
+    11b4:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+    11b8:	f3 0f 10 40 08       	movss  0x8(%rax),%xmm0
+    11bd:	f3 0f 5a c0          	cvtss2sd %xmm0,%xmm0
+    11c1:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+    11c5:	48 8b 00             	mov    (%rax),%rax
+    11c8:	48 89 c6             	mov    %rax,%rsi
+    11cb:	48 8d 3d 46 0e 00 00 	lea    0xe46(%rip),%rdi        # 2018 <_IO_stdin_used+0x18>
+    11d2:	b8 01 00 00 00       	mov    $0x1,%eax
+    11d7:	e8 a4 fe ff ff       	callq  1080 <printf@plt>
+    return (0);
+    11dc:	b8 00 00 00 00       	mov    $0x0,%eax
+}
+    11e1:	c9                   	leaveq 
+    11e2:	c3                   	retq   
+
+00000000000011e3 <new_dog>:
+ * @owner: pointer to dog owner name string
+ *
+ * Return: pointer to the newly created dog
+ */
+dog_t *new_dog(char *name, float age, char *owner)
+{
+    11e3:	f3 0f 1e fa          	endbr64 
+    11e7:	55                   	push   %rbp
+    11e8:	48 89 e5             	mov    %rsp,%rbp
+    11eb:	48 83 ec 30          	sub    $0x30,%rsp
+    11ef:	48 89 7d e8          	mov    %rdi,-0x18(%rbp)
+    11f3:	f3 0f 11 45 e4       	movss  %xmm0,-0x1c(%rbp)
+    11f8:	48 89 75 d8          	mov    %rsi,-0x28(%rbp)
+	dog_t *ptr;
+
+	ptr = malloc(sizeof(dog_t));
+    11fc:	bf 18 00 00 00       	mov    $0x18,%edi
+    1201:	e8 8a fe ff ff       	callq  1090 <malloc@plt>
+    1206:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
+	if (ptr == NULL)
+    120a:	48 83 7d f8 00       	cmpq   $0x0,-0x8(%rbp)
+    120f:	75 0a                	jne    121b <new_dog+0x38>
+	{
+		return (NULL);
+    1211:	b8 00 00 00 00       	mov    $0x0,%eax
+    1216:	e9 87 00 00 00       	jmpq   12a2 <new_dog+0xbf>
+	}
+
+	ptr->name = strdup2(name);
+    121b:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+    121f:	48 89 c7             	mov    %rax,%rdi
+    1222:	e8 7d 00 00 00       	callq  12a4 <strdup2>
+    1227:	48 8b 55 f8          	mov    -0x8(%rbp),%rdx
+    122b:	48 89 02             	mov    %rax,(%rdx)
+	if (ptr->name == NULL)
+    122e:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+    1232:	48 8b 00             	mov    (%rax),%rax
+    1235:	48 85 c0             	test   %rax,%rax
+    1238:	75 13                	jne    124d <new_dog+0x6a>
+	{
+		free(ptr);
+    123a:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+    123e:	48 89 c7             	mov    %rax,%rdi
+    1241:	e8 2a fe ff ff       	callq  1070 <free@plt>
+		return (NULL);
+    1246:	b8 00 00 00 00       	mov    $0x0,%eax
+    124b:	eb 55                	jmp    12a2 <new_dog+0xbf>
+	}
+
+	ptr->age = age;
+    124d:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+    1251:	f3 0f 10 45 e4       	movss  -0x1c(%rbp),%xmm0
+    1256:	f3 0f 11 40 08       	movss  %xmm0,0x8(%rax)
+
+	ptr->owner = strdup2(owner);
+    125b:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+    125f:	48 89 c7             	mov    %rax,%rdi
+    1262:	e8 3d 00 00 00       	callq  12a4 <strdup2>
+    1267:	48 8b 55 f8          	mov    -0x8(%rbp),%rdx
+    126b:	48 89 42 10          	mov    %rax,0x10(%rdx)
+	if (ptr->owner == NULL)
+    126f:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+    1273:	48 8b 40 10          	mov    0x10(%rax),%rax
+    1277:	48 85 c0             	test   %rax,%rax
+    127a:	75 22                	jne    129e <new_dog+0xbb>
+	{
+		free(ptr->name);
+    127c:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+    1280:	48 8b 00             	mov    (%rax),%rax
+    1283:	48 89 c7             	mov    %rax,%rdi
+    1286:	e8 e5 fd ff ff       	callq  1070 <free@plt>
+		free(ptr);
+    128b:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+    128f:	48 89 c7             	mov    %rax,%rdi
+    1292:	e8 d9 fd ff ff       	callq  1070 <free@plt>
+		return (NULL);
+    1297:	b8 00 00 00 00       	mov    $0x0,%eax
+    129c:	eb 04                	jmp    12a2 <new_dog+0xbf>
+	}
+
+	return (ptr);
+    129e:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+}
+    12a2:	c9                   	leaveq 
+    12a3:	c3                   	retq   
+
+00000000000012a4 <strdup2>:
+ *
+ * Return: a pointer to a newly allocated space in memory,
+ * which contains a copy of the string given as a parameter.
+ */
+char *strdup2(char *str)
+{
+    12a4:	f3 0f 1e fa          	endbr64 
+    12a8:	55                   	push   %rbp
+    12a9:	48 89 e5             	mov    %rsp,%rbp
+    12ac:	48 83 ec 20          	sub    $0x20,%rsp
+    12b0:	48 89 7d e8          	mov    %rdi,-0x18(%rbp)
+	int i, j;
+	char *ptc;
+
+	if (str == NULL)
+    12b4:	48 83 7d e8 00       	cmpq   $0x0,-0x18(%rbp)
+    12b9:	75 07                	jne    12c2 <strdup2+0x1e>
+	{
+		return (NULL);
+    12bb:	b8 00 00 00 00       	mov    $0x0,%eax
+    12c0:	eb 69                	jmp    132b <strdup2+0x87>
+	}
+
+	j = _strlen(str);
+    12c2:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+    12c6:	48 89 c7             	mov    %rax,%rdi
+    12c9:	e8 5f 00 00 00       	callq  132d <_strlen>
+    12ce:	89 45 f4             	mov    %eax,-0xc(%rbp)
+	ptc = malloc((j + 1) * sizeof(char));
+    12d1:	8b 45 f4             	mov    -0xc(%rbp),%eax
+    12d4:	83 c0 01             	add    $0x1,%eax
+    12d7:	48 98                	cltq   
+    12d9:	48 89 c7             	mov    %rax,%rdi
+    12dc:	e8 af fd ff ff       	callq  1090 <malloc@plt>
+    12e1:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
+	if (ptc == NULL)
+    12e5:	48 83 7d f8 00       	cmpq   $0x0,-0x8(%rbp)
+    12ea:	75 07                	jne    12f3 <strdup2+0x4f>
+	{
+		return (NULL);
+    12ec:	b8 00 00 00 00       	mov    $0x0,%eax
+    12f1:	eb 38                	jmp    132b <strdup2+0x87>
+	}
+
+	/*copy all the xters of str, including '\0'*/
+	for (i = 0; i <= j; i++)
+    12f3:	c7 45 f0 00 00 00 00 	movl   $0x0,-0x10(%rbp)
+    12fa:	eb 23                	jmp    131f <strdup2+0x7b>
+	{
+		*(ptc + i) = *(str + i);
+    12fc:	8b 45 f0             	mov    -0x10(%rbp),%eax
+    12ff:	48 63 d0             	movslq %eax,%rdx
+    1302:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+    1306:	48 01 d0             	add    %rdx,%rax
+    1309:	8b 55 f0             	mov    -0x10(%rbp),%edx
+    130c:	48 63 ca             	movslq %edx,%rcx
+    130f:	48 8b 55 f8          	mov    -0x8(%rbp),%rdx
+    1313:	48 01 ca             	add    %rcx,%rdx
+    1316:	0f b6 00             	movzbl (%rax),%eax
+    1319:	88 02                	mov    %al,(%rdx)
+	for (i = 0; i <= j; i++)
+    131b:	83 45 f0 01          	addl   $0x1,-0x10(%rbp)
+    131f:	8b 45 f0             	mov    -0x10(%rbp),%eax
+    1322:	3b 45 f4             	cmp    -0xc(%rbp),%eax
+    1325:	7e d5                	jle    12fc <strdup2+0x58>
+	}
+
+	return (ptc);
+    1327:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+}
+    132b:	c9                   	leaveq 
+    132c:	c3                   	retq   
+
+000000000000132d <_strlen>:
+ * @s: pointer to char type
+ *
+ * Return: an integer length of the argument
+ */
+int _strlen(char *s)
+{
+    132d:	f3 0f 1e fa          	endbr64 
+    1331:	55                   	push   %rbp
+    1332:	48 89 e5             	mov    %rsp,%rbp
+    1335:	48 89 7d e8          	mov    %rdi,-0x18(%rbp)
+	int len, shift = 0;
+    1339:	c7 45 fc 00 00 00 00 	movl   $0x0,-0x4(%rbp)
+
+	for (len = 0; *(s + shift);)
+    1340:	c7 45 f8 00 00 00 00 	movl   $0x0,-0x8(%rbp)
+    1347:	eb 08                	jmp    1351 <_strlen+0x24>
+	{
+		len++;
+    1349:	83 45 f8 01          	addl   $0x1,-0x8(%rbp)
+		shift++;
+    134d:	83 45 fc 01          	addl   $0x1,-0x4(%rbp)
+	for (len = 0; *(s + shift);)
+    1351:	8b 45 fc             	mov    -0x4(%rbp),%eax
+    1354:	48 63 d0             	movslq %eax,%rdx
+    1357:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+    135b:	48 01 d0             	add    %rdx,%rax
+    135e:	0f b6 00             	movzbl (%rax),%eax
+    1361:	84 c0                	test   %al,%al
+    1363:	75 e4                	jne    1349 <_strlen+0x1c>
+	}
+
+	return (len);
+    1365:	8b 45 f8             	mov    -0x8(%rbp),%eax
+}
+    1368:	5d                   	pop    %rbp
+    1369:	c3                   	retq   
+    136a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+
+0000000000001370 <__libc_csu_init>:
+    1370:	f3 0f 1e fa          	endbr64 
+    1374:	41 57                	push   %r15
+    1376:	4c 8d 3d 2b 2a 00 00 	lea    0x2a2b(%rip),%r15        # 3da8 <__frame_dummy_init_array_entry>
+    137d:	41 56                	push   %r14
+    137f:	49 89 d6             	mov    %rdx,%r14
+    1382:	41 55                	push   %r13
+    1384:	49 89 f5             	mov    %rsi,%r13
+    1387:	41 54                	push   %r12
+    1389:	41 89 fc             	mov    %edi,%r12d
+    138c:	55                   	push   %rbp
+    138d:	48 8d 2d 1c 2a 00 00 	lea    0x2a1c(%rip),%rbp        # 3db0 <__do_global_dtors_aux_fini_array_entry>
+    1394:	53                   	push   %rbx
+    1395:	4c 29 fd             	sub    %r15,%rbp
+    1398:	48 83 ec 08          	sub    $0x8,%rsp
+    139c:	e8 5f fc ff ff       	callq  1000 <_init>
+    13a1:	48 c1 fd 03          	sar    $0x3,%rbp
+    13a5:	74 1f                	je     13c6 <__libc_csu_init+0x56>
+    13a7:	31 db                	xor    %ebx,%ebx
+    13a9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+    13b0:	4c 89 f2             	mov    %r14,%rdx
+    13b3:	4c 89 ee             	mov    %r13,%rsi
+    13b6:	44 89 e7             	mov    %r12d,%edi
+    13b9:	41 ff 14 df          	callq  *(%r15,%rbx,8)
+    13bd:	48 83 c3 01          	add    $0x1,%rbx
+    13c1:	48 39 dd             	cmp    %rbx,%rbp
+    13c4:	75 ea                	jne    13b0 <__libc_csu_init+0x40>
+    13c6:	48 83 c4 08          	add    $0x8,%rsp
+    13ca:	5b                   	pop    %rbx
+    13cb:	5d                   	pop    %rbp
+    13cc:	41 5c                	pop    %r12
+    13ce:	41 5d                	pop    %r13
+    13d0:	41 5e                	pop    %r14
+    13d2:	41 5f                	pop    %r15
+    13d4:	c3                   	retq   
+    13d5:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    13dc:	00 00 00 00 
+
+00000000000013e0 <__libc_csu_fini>:
+    13e0:	f3 0f 1e fa          	endbr64 
+    13e4:	c3                   	retq   
+
+Disassembly of section .fini:
+
+00000000000013e8 <_fini>:
+    13e8:	f3 0f 1e fa          	endbr64 
+    13ec:	48 83 ec 08          	sub    $0x8,%rsp
+    13f0:	48 83 c4 08          	add    $0x8,%rsp
+    13f4:	c3                   	retq   
