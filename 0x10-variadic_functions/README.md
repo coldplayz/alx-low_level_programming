@@ -7,4 +7,5 @@
 2-print_strings.c
 * prints strings
 
-
+3-print_all.c
+* prints data objects of any of the specified types
