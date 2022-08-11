@@ -1,5 +1,5 @@
 #ifndef lists_h
-#define list_h
+#define lists_h
 
 /**
  * struct list_s - singly linked list
@@ -20,4 +20,4 @@ size_t print_list(const list_t *h);
 
 
 
-#endif /*list_h*/
+#endif /*lists_h*/
