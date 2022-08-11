@@ -10,7 +10,7 @@
  */
 size_t print_list(const list_t *h)
 {
-	size_t n =0;
+	size_t n = 0;
 
 	for (; h; h = h->next)
 	{
