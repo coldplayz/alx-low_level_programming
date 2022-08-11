@@ -12,7 +12,8 @@
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new;
+	list_t *new, *temp = *head;
+	/* temp is used so as not to change the address *head points to */
 
 	new = malloc(sizeof(list_t));
 	if (new == NULL)
@@ -31,14 +32,18 @@ list_t *add_node_end(list_t **head, const char *str)
 	new->next = NULL;		/*new node is now pointing to what head is pointing to*/
 
 	if (list_len(*head) == 0)
-		*head = new;		/*new node now head node, if it's the first node of the list*/
-
-	for (; *head; *head = (*head)->next)
 	{
-		if ((*head)->next == NULL)	/* when we reach the previous tail of the list... */
+		*head = new;		/*new node now head node, if it's the first node of the list*/
+	}
+	else
+	{
+		for (; temp; temp = (temp)->next)
 		{
-			(*head)->next = new;	/* ...let it point to the new tail */
-			break;
+			if ((temp)->next == NULL)	/*when we reach the previous tail of the list...*/
+			{
+				(temp)->next = new;	/* ...let it point to the new tail */
+				break;
+			}
 		}
 	}
 
