@@ -10,4 +10,7 @@
 3-add_node_end.c
 *  adds a new node at the end of a list_t list.
 
+4-free_list.c
+* frees a list_t list.
+
 
