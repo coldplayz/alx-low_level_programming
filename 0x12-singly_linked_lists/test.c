@@ -11,9 +11,9 @@
 int main(void)
 {
 	size_t a;
-    list_t *head;
+    list_t *head, t = {"str", 3, NULL};
 
-    head = NULL;
+    head = &t;
 
     a = list_len(head);
     printf("%lu\n", a);
