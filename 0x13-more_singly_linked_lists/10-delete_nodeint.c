@@ -13,7 +13,8 @@
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	listint_t  *temp, *temp2;
-	unsigned int i, list_len;
+	unsigned int list_len;
+	long int i;
 
 	list_len = listint_len(*head);
 	if (index >= list_len || list_len == 0)
@@ -24,7 +25,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	temp = *head;
 	if (index > 0)
 	{
-		for (i = 0; i < index; i++)
+		for (i = 0; i < (long int)index; i++)
 		{
 			/**
 			 * By the end of this loop, temp2 will hold the address

@@ -15,7 +15,7 @@ size_t print_listint_safe(const listint_t *head)
 
 	if (head == NULL)
 	{
-		exit(98);
+		return (0);
 	}
 
 	loop_node = list_loop_node(head);	/* get loop node */
