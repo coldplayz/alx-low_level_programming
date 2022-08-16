@@ -34,4 +34,7 @@
 100-reverse_listint.c
 * reverses a listint_t linked list.
 
+101-print_listint_safe.c
+* prints a listint_t linked list, even ones with a loop.
 
+ 

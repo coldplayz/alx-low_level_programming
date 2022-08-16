@@ -49,6 +49,10 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
 int delete_nodeint_at_index(listint_t **head, unsigned int index);
 void pop_listint2(listint_t **head);
 listint_t *reverse_listint(listint_t **head);
+size_t printListInt2(const listint_t *h);
+size_t print_listint_safe(const listint_t *head);
+listint_t *list_loop_node(const listint_t *head);
+size_t printListInt3(const listint_t *h, const listint_t *loop_node);
 
 
 
