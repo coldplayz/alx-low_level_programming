@@ -47,8 +47,8 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	}
 	else if (idx == 0)		/* if first node is to be displaced by new */
 	{
-		*head = new;
-		new->next = temp;
+		*head = new;		/* new is now the head... */
+		new->next = temp;	/* ...and new is pointing to the previous head */
 	}
 	return (new);
 }

@@ -51,8 +51,10 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 size_t listint_len(const listint_t *h)
 {
 	size_t n = 0;
+	listint_t *temp;
 
-	for (; h; h = h->next)
+	temp = (listint_t *)h;
+	for (; temp; temp = temp->next)
 	{
 		n++;
 	}
