@@ -135,12 +135,14 @@ size_t printListInt3(const listint_t *h, const listint_t *loop_node)
 
 		if (m == 2)
 		{
+			n--;
 			break;
 		}
 
 		printf("[%p] %d\n", (void *)temp, temp->n);
 	}
 	printf("-> [%p] %d\n", (void *)loop_node, loop_node->n);
+	printf("%lu\n", n);
 
 	return (n);
 }
