@@ -53,7 +53,10 @@ size_t printListInt2(const listint_t *h);
 size_t print_listint_safe(const listint_t *head);
 listint_t *list_loop_node(const listint_t *head);
 size_t printListInt3(const listint_t *h, const listint_t *loop_node);
-
+size_t free_listint_safe(listint_t **h);
+size_t freeListInt2(listint_t **h);
+size_t freeListInt3(listint_t **h, listint_t *loop_node);
+listint_t *find_listint_loop(listint_t *head);
 
 
 #endif /*lists_h*/

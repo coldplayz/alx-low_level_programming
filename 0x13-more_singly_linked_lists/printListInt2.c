@@ -12,11 +12,13 @@
 size_t printListInt2(const listint_t *h)
 {
 	size_t n = 0;
+	listint_t *temp;
 
-	for (; h; h = h->next)
+	temp = (listint_t *)h;
+	for (; temp; temp = temp->next)
 	{
 		n++;
-		printf("[%p] %d\n", (void *)h, h->n);
+		printf("[%p] %d\n", (void *)temp, temp->n);
 	}
 
 	return (n);

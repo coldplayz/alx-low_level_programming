@@ -37,4 +37,8 @@
 101-print_listint_safe.c
 * prints a listint_t linked list, even ones with a loop.
 
- 
+102-free_listint_safe.c
+* frees a listint_t list.
+
+103-find_loop.c
+* finds the loop in a linked list. 

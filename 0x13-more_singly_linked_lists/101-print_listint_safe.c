@@ -93,11 +93,13 @@ listint_t *list_loop_node(const listint_t *head)
 size_t printListInt2(const listint_t *h)
 {
 	size_t n = 0;
+	listint_t *temp;
 
-	for (; h; h = h->next)
+	temp = (listint_t *)h;
+	for (; temp; temp = temp->next)
 	{
 		n++;
-		printf("[%p] %d\n", (void *)h, h->n);
+		printf("[%p] %d\n", (void *)temp, temp->n);
 	}
 
 	return (n);
@@ -142,7 +144,6 @@ size_t printListInt3(const listint_t *h, const listint_t *loop_node)
 		printf("[%p] %d\n", (void *)temp, temp->n);
 	}
 	printf("-> [%p] %d\n", (void *)loop_node, loop_node->n);
-	printf("%lu\n", n);
 
 	return (n);
 }
