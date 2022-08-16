@@ -21,7 +21,7 @@ size_t free_listint_safe(listint_t **h)
 	loop_node = list_loop_node(*h);	/* get loop node */
 	if (loop_node == NULL)
 	{
-		n = freeListInt2(h);	/* print if no loop */
+		n = freeListInt2(h);	/* free if no loop */
 	}
 	else
 	{

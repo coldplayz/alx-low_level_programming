@@ -14,6 +14,15 @@ listint_t *list_loop_node(const listint_t *head)
 	listint_t *temp1, *temp2;
 
 	temp1 = head->next;
+	/**
+	 * temp1 stores the address of successive structs, starting
+	 * from the struct head points to. temp2 stores the address
+	 * of every struct from the head to temp1 (for each run of
+	 * the second FOR loop), each of which is compared to temp1
+	 * for equality. By the end of this loop, if 'flag' is set
+	 * to zero, then temp2 would hold the address of the loop
+	 * node, or there's no loop in the list.
+	 */
 	for (;; temp1 = temp1->next)
 	{
 		n++;
@@ -32,7 +41,6 @@ listint_t *list_loop_node(const listint_t *head)
 			break;
 		}
 	}
-
 	if (temp1 == NULL)
 	{
 		return (NULL);

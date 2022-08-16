@@ -16,6 +16,13 @@ size_t printListInt3(const listint_t *h, const listint_t *loop_node)
 	listint_t *temp;
 
 	temp = (listint_t *)h;
+	/**
+	 * m keeps track of the number of times
+	 * the 'loop_node' address is accessed.
+	 * When it's accessed/referenced for the
+	 * second time, that signals that the
+	 * loop is about to begin, and stops printing.
+	 */
 	for (; temp; temp = temp->next)
 	{
 		n++;

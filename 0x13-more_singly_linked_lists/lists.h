@@ -30,6 +30,34 @@ typedef struct listint_s
 	struct listint_s *next;
 } listint_t;
 
+/**
+ * in - collection of integers
+ * @n: an int
+ * @i: an int
+ * @flag: an int
+ *
+ * Description: used to work around variable number declaration limit
+ */
+typedef struct in
+{
+	int n;
+	int i;
+	int flag;
+} in;
+
+/**
+ * st - collection of pointers to listint_t objects
+ * @temp1: a pointer to listint_t type
+ * @temp2: a pointer to listint_t type
+ *
+ * Description: used to try to work around variable limit
+ */
+typedef struct st
+{
+	listint_t *temp1;
+	listint_t *temp2;
+} st;
+
 size_t print_list(const list_t *h);
 size_t list_len(const list_t *h);
 list_t *add_node(list_t **head, const char *str);
@@ -57,6 +85,7 @@ size_t free_listint_safe(listint_t **h);
 size_t freeListInt2(listint_t **h);
 size_t freeListInt3(listint_t **h, listint_t *loop_node);
 listint_t *find_listint_loop(listint_t *head);
+listint_t *list_loop_node2(const listint_t *head);
 
 
 #endif /*lists_h*/
