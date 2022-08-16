@@ -54,11 +54,7 @@ void pop_listint2(listint_t **head)
 {
 	listint_t *head_cpy;
 
-	if (listint_len(*head) == 0)
-	{
-		;
-	}
-	else
+	if (listint_len(*head) != 0)
 	{
 		head_cpy = *head;
 		*head = (*head)->next;
