@@ -13,7 +13,7 @@ void print_all(const char * const format, ...)
 	va_list ap;
 	std structure;
 
-	if (format == NULL)
+	while (!format)
 	{
 		printf("(nil)\n");
 		exit(EXIT_SUCCESS);
