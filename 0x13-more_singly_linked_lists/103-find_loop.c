@@ -25,6 +25,11 @@ listint_t *list_loop_node2(const listint_t *head)
 	in int_struct = {0, 0, 1};
 	st ptr_struct;
 
+	if (head == NULL)
+	{
+		return (NULL);
+	}
+
 	ptr_struct.temp1 = head->next;
 	/**
 	 * temp1 stores the address of successive structs, starting
