@@ -55,7 +55,7 @@ size_t freeListInt2(listint_t **h)
 		free(temp);
 	}
 
-	return (n * sizeof(listint_t));
+	return (n);
 }
 
 
@@ -92,5 +92,5 @@ size_t freeListInt3(listint_t **h, listint_t *loop_node)
 	}
 	*h = NULL;
 
-	return (n * sizeof(listint_t));
+	return (n);
 }
