@@ -9,12 +9,11 @@
  */
 void print_all(const char * const format, ...)
 {
-	int i, j, valid, count = 0;
-	char *std_form = "cifs";
+	int i, count = 0;
 	va_list ap;
+	std structure;
 
 	va_start(ap, format);
-	valid = nvc(std_form, format);
 
 	i = 0;
 	while (format[i])
@@ -22,123 +21,106 @@ void print_all(const char * const format, ...)
 		switch (format[i])
 		{
 			case 'c':
-				s.charr = va_arg(ap, int);
-				print_any(s,
+				structure.c = va_arg(ap, int);
+				print_any(structure, format[i], count);
+				count++;
+				break;
+			case 'i':
+				structure.i = va_arg(ap, int);
+				print_any(structure, format[i], count);
+				count++;
+				break;
+			case 'f':
+				structure.f = va_arg(ap, double);
+				print_any(structure, format[i], count);
+				count++;
+				break;
+			case 's':
+				structure.s = va_arg(ap, char *);
+				print_any(structure, format[i], count);
+				count++;
+				break;
+		}
 		i++;
 	}
 	va_end(ap);
 	printf("\n");
 }
 
-
-/**
- * nvc - determines number of characters in user_form
- * that matches any of the characters in std_form
- * @std_form: a pointer to the standard format string
- * @user_form: a pointer to the user-defined format string
- *
- * Return: an int representing the number of matches
- */
-int nvc(const char *const std_form, const char *const user_form)
-{
-	int i, j, count = 0;
-
-	for (i = 0; user_form[i]; i++)
-	{
-		for (j = 0; std_form[j]; j++)
-		{
-			if (user_form[i] == std_form[j])
-			{
-				count++;
-				break;
-			}
-		}
-	}
-
-	return (count);
-}
-
-
-/**
- * mi - finds the index, in std_form, that xter first finds a match
- * @std_form: a pointer to the string pattern
- * @xter: the character to match
- *
- * Return: a non-negative integer representing
- * the matching index in std_form; or -1 if no match is found
- */
-int mi(const char *const std_form, char xter)
-{
-	int i;
-
-	for (i = 0; std_form[i]; i++)
-	{
-		if (std_form[i] == xter)
-		{
-			return (i);
-		}
-	}
-
-	return (-1);
-}
-
-
 /**
  * print_any - prints data of any of a specified number of data types
- * @ap: an initialized argument pointer of type va_list
+ * @structure: a structure that stores data types of the standard format.
  * @c: the character that determines which,
- * out of several, blocks of code to execute
- * @valid: the number of matching
- * characters between std and user-defined formats
+ * out of several, block of code to execute
  * @count: the number of times arguments have been printed
  */
-void print_any(va_list ap, char c, int valid, int count)
+void print_any(std structure, char c, int count)
 {
-	char *ptc;
-
 	switch (c)
 	{
 		case 'c':
-			if (((valid - 1) == 0) || ((count == (valid - 1)) && (valid > 1)))
-				printf("%c", va_arg(ap, int));
-			else
-				printf("%c, ", va_arg(ap, int));
+			switch (count)
+			{
+				case 0:
+					printf("%c", structure.c);
+					break;
+				default:
+					printf(", %c", structure.c);
+			}
 			break;
 		case 'i':
-			if (((valid - 1) == 0) || ((count == (valid - 1)) && (valid > 1)))
-				printf("%d", va_arg(ap, int));
-			else
-				printf("%d, ", va_arg(ap, int));
+			switch (count)
+			{
+				case 0:
+					printf("%d", structure.i);
+					break;
+				default:
+					printf(", %d", structure.i);
+			}
 			break;
 		case 'f':
-			if (((valid - 1) == 0) || ((count == (valid - 1)) && (valid > 1)))
-				printf("%f", va_arg(ap, double));
-			else
-				printf("%f, ", va_arg(ap, double));
-			break;
-		case 's':
-			ptc = va_arg(ap, char *);
-			switch (ptc == NULL)
+			switch (count)
 			{
-				case 1:
-					if (((valid - 1) == 0) || ((count == (valid - 1)) && (valid > 1)))
-						printf("(nil)");
-					else
-						printf("(nil), ");
-					break;
 				case 0:
-					if (((valid - 1) == 0) || ((count == (valid - 1)) && (valid > 1)))
-						printf("%s", ptc);
-					else
-						printf("%s, ", ptc);
+					printf("%f", structure.f);
+					break;
+				default:
+					printf(", %f", structure.f);
 			}
+			break;
+		default:
+			print_any_ext(structure, c, count);
 	}
+}
 
+
+/**
+ * print_any_ext - an extension of print_any().
+ * @structure: structure containing standard format data types.
+ * @c: format character.
+ * @count: number of arguments printed.
+ */
+void print_any_ext(std structure, char c, int count)
+{
 	switch (c)
 	{
-		case 'c':
-			switch (matches)
+		case 's':
+			switch (count)
 			{
-				case 1:
-					printf("%c", s->charr);
+				case 0:
+					if (structure.s == NULL)
+					{
+						printf("(nil)");
+						break;
+					}
+					printf("%s", structure.s);
+				default:
+					if (structure.s == NULL)
+					{
+						printf(", (nil)");
+						break;
+					}
+					printf(", %s", structure.s);
+			}
+	}
 }
