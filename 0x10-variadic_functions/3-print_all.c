@@ -19,13 +19,11 @@ void print_all(const char * const format, ...)
 	i = 0;
 	while (format[i])
 	{
-		j = mi(std_form, format[i]);
-		while (j != -1)
+		switch (format[i])
 		{
-			print_any(ap, std_form[j], valid, count);
-			count++;
-			break;
-		}
+			case 'c':
+				s.charr = va_arg(ap, int);
+				print_any(s,
 		i++;
 	}
 	va_end(ap);
@@ -135,4 +133,12 @@ void print_any(va_list ap, char c, int valid, int count)
 						printf("%s, ", ptc);
 			}
 	}
+
+	switch (c)
+	{
+		case 'c':
+			switch (matches)
+			{
+				case 1:
+					printf("%c", s->charr);
 }
