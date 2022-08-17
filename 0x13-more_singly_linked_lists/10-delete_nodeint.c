@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "lists.h"
+size_t listint_len2(const listint_t *h);
 
 /**
  * delete_nodeint_at_index - deletes
@@ -16,7 +17,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	unsigned int list_len;
 	long int i;
 
-	list_len = listint_len(*head);
+	list_len = listint_len2(*head);
 	if (index >= list_len || list_len == 0)
 	{
 		return (-1);
@@ -54,10 +55,31 @@ void pop_listint2(listint_t **head)
 {
 	listint_t *head_cpy;
 
-	if (listint_len(*head) != 0)
+	if (listint_len2(*head) != 0)
 	{
 		head_cpy = *head;
 		*head = (*head)->next;
 		free(head_cpy);
 	}
+}
+
+
+/**
+ * listint_len - determines the number of elements of the structure listint_s
+ * @h: the head of a structure of type 'struct listint_s'
+ *
+ * Return: the number of nodes in the list
+ */
+size_t listint_len2(const listint_t *h)
+{
+	size_t n = 0;
+	listint_t *temp;
+
+	temp = (listint_t *)h;
+	for (; temp; temp = temp->next)
+	{
+		n++;
+	}
+
+	return (n);
 }
