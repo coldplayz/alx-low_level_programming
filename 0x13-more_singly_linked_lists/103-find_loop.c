@@ -54,17 +54,11 @@ listint_t *list_loop_node2(const listint_t *head)
 			ptr_struct.temp2 = (ptr_struct.temp2)->next;
 		}
 		if (int_struct.flag == 0)
-		{
 			break;
-		}
 	}
 	if (ptr_struct.temp1 == NULL)
-	{
 		return (NULL);
-	}
 	else if (int_struct.flag == 0)
-	{
 		return (ptr_struct.temp2);
-	}
 	return (ptr_struct.temp2);
 }
