@@ -13,8 +13,12 @@ void print_all(const char * const format, ...)
 	va_list ap;
 	std structure;
 
+	if (format == NULL)
+	{
+		printf("(nil)\n");
+		exit(EXIT_SUCCESS);
+	}
 	va_start(ap, format);
-
 	i = 0;
 	while (format[i])
 	{
@@ -114,6 +118,7 @@ void print_any_ext(std structure, char c, int count)
 						break;
 					}
 					printf("%s", structure.s);
+					break;
 				default:
 					if (structure.s == NULL)
 					{
