@@ -103,7 +103,12 @@ char *rev_mult_rev(char *s1, char *s2);
 /* Bit manipulation */
 unsigned int binary_to_uint(const char *b);
 unsigned int str2bin(const char *b);
-
+void print_binary(unsigned long int n);
+int get_bit(unsigned long int n, unsigned int index);
+int set_bit(unsigned long int *n, unsigned int index);
+int clear_bit(unsigned long int *n, unsigned int index);
+unsigned int flip_bits(unsigned long int n, unsigned long int m);
+int get_endianness(void);
 
 
 #endif /* MAIN_H */
