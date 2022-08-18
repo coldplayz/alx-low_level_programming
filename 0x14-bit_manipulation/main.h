@@ -102,7 +102,7 @@ char *rev_mult_rev(char *s1, char *s2);
 
 /* Bit manipulation */
 unsigned int binary_to_uint(const char *b);
-
+unsigned int str2bin(const char *b);
 
 
 
