@@ -28,14 +28,13 @@ unsigned int binary_to_uint(const char *b)
  */
 unsigned int str2bin(const char *b)
 {
-	unsigned int i, mask, bin = 0, len;
+	unsigned int i, mask, bin = 0, len = _strlen((char *)b);
 
 	if (b == NULL)
 	{
 		return (0);
 	}
 
-	len = _strlen((char *)b);
 	for (i = 0; b[i]; ++i)
 	{
 		if (b[i] == '0' || b[i] == '1')

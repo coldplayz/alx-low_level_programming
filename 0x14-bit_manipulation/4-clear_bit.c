@@ -8,17 +8,35 @@
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int max_bits;
-	unsigned long int mask = 1;
+	unsigned long int i, mask, n_copy = *n, len = sizeof(mask) * 8;
+	char c;
 
-	/* validate index is not out of range */
-	max_bits = (sizeof(unsigned long int) * 8);
-	if (index > max_bits)
+	if (index >= len)
+	{
 		return (-1);
+	}
 
-	/* create mask with 0 at index (...11011...) to work on that index */
-	mask = ~(mask << index);
-	*n = (*n & mask);
+	mask = 1;
+	for (i = 0; i < len; ++i)
+	{
+		c = n_copy & mask ? '1' : '0';
+		if (i == index)
+		{
+			/* get the bit at the specified index */
+			if ((c - '0') == 0)
+			{
+				return (1);
+			}
+			else
+			{
+				/* if 1, left-shift mask by index bits and XOR with n... */
+				/* ...to flip bit 1 at specified index of the bit pattern. */
+				mask = (unsigned long int)(1 << index);
+				*n ^= mask;
+			}
+		}
+		n_copy >>= 1;
+	}
 
 	return (1);
 }

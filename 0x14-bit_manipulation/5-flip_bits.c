@@ -8,18 +8,22 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned int diff_bits = 0;
-	unsigned long int difference;
+	unsigned long int mask;
+	unsigned int i, diff = 0, len = sizeof(unsigned long int) * 8;
+	char c, d;
 
-	/* Xor both nums to show bit 1 if different bits */
-	difference = n ^ m;
+	mask = 1;
+	for (i = 0; i < len; ++i)
+	{
+		c = n & mask ? '1' : '0';
+		d = m & mask ? '1' : '0';
+		if (c != d)
+		{
+			diff++;
+		}
+		n >>= 1;
+		m >>= 1;
+	}
 
-	/* keep shifting difference to right and tallying the ones up */
-	do {
-		diff_bits += (difference & 1);
-		difference >>= 1;
-	} while
-		(difference > 0);
-
-	return (diff_bits);
+	return (diff);
 }

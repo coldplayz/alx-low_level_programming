@@ -1,4 +1,7 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
+
 
 /**
  * get_bit - get bit at index
@@ -8,16 +11,25 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	int bit;
-	unsigned int max_bits;
+	unsigned long int mask;
+	unsigned int i, len = sizeof(unsigned long int) * 8;
+	char c;
 
-	/* validate index is not out of range */
-	max_bits = (sizeof(unsigned long int) * 8);
-	if (index > max_bits)
+	if (index >= len)
+	{
 		return (-1);
+	}
 
-	/* shift number index places right to find bit */
-	bit = ((n >> index) & 1);
+	mask = 1;
+	for (i = 0; i < len; ++i)
+	{
+		c = n & mask ? '1' : '0';
+		if (i == index)
+		{
+			return (c - '0');
+		}
+		n >>= 1;
+	}
 
-	return (bit);
+	return (c - '0');
 }
