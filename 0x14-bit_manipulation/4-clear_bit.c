@@ -8,7 +8,7 @@
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int i, mask, n_copy = *n, len = sizeof(mask) * 8;
+	unsigned long int i, mask, n_copy = *n, j = 1, len = sizeof(mask) * 8;
 	char c;
 
 	if (index >= len)
@@ -31,7 +31,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 			{
 				/* if 1, left-shift mask by index bits and XOR with n... */
 				/* ...to flip bit 1 at specified index of the bit pattern. */
-				mask = (unsigned long int)(1 << index);
+				mask = j << index;
 				*n ^= mask;
 			}
 		}

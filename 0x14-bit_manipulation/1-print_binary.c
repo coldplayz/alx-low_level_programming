@@ -7,7 +7,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int i, mask, flag = 0, len = sizeof(unsigned long int) * 8;
+	unsigned long int i, mask = 1, flag = 0, len = sizeof(unsigned long int) * 8;
 	char c;
 
 	if (n == 0)
@@ -16,7 +16,7 @@ void print_binary(unsigned long int n)
 		return;
 	}
 
-	mask = (unsigned long int)(1 << (len - 1));
+	mask <<= (len - 1);
 	for (i = 0; i < len; ++i)
 	{
 		c = n & mask ? '1' : '0';

@@ -1,13 +1,14 @@
 #include <stdio.h>
 #include "main.h"
 
+/**
+ * main - check the code .
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
-	unsigned long int i, mask, n;
-
-	mask = (unsigned long int)1 << 32;
-	printf("%lu\n", mask);
-	printf("ui: %lu\n", sizeof(unsigned long int));
-
+	print_binary(1);
+	printf("\n");
 	return (0);
 }
