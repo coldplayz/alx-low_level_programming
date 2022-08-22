@@ -57,6 +57,8 @@ int main(int ac, char *av[])
  * @fdrd: file descriptor of file to read from.
  * @fdwr: file descriptor of file to write to.
  * @buff: buffer of 1 kb.
+ * @av1: pointer to string representation of argument 1
+ * @av2: pointer to string representation of argument 2
  */
 void handle_rdwr(int fdrd, int fdwr, char *buff, char *av1, char *av2)
 {
@@ -109,7 +111,8 @@ void handle_close(int fd)
  */
 void handle_args(int ac, char *av0)
 {
-	if ((ac != 3) || (_strcmp(av0, "cp") != 0))
+	(void)av0;
+	if ((ac != 3))
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
