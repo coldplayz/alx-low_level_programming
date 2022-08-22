@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
+#include "main.h"
 
 /**
  * read_textfile -  reads a text file and
@@ -37,17 +38,25 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ptc = malloc(letters + 1);
 	if (ptc == NULL)
 	{
+		close(fd);
 		return (0);
 	}
 	ptc[letters] = 0;
 
 	nr = read(fd, ptc, letters);
 	if (nr < 0)
+	{
+		close(fd);
 		return (0);
+	}
 	nw = write(STDOUT_FILENO, ptc, nr);
 	if (nr != nw)
+	{
+		close(fd);
 		return (0);
+	}
 
+	close(fd);
 	free(ptc);
 	return (nw);
 }
