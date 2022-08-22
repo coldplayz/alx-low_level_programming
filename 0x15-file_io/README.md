@@ -4,4 +4,7 @@
 1-create_file.c
 * creates a file.
 
+2-append_text_to_file.c
+* appends text at the end of a file.
+
 
