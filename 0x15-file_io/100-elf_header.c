@@ -189,10 +189,9 @@ void handle_wrerr(int nw)
 
 
 /**
- * handle_args - checks if number of main function
+ * handle_args2 - checks if number of main function
  * arguments equals 2
  * @ac: number if main arguments.
- * @av0: first argument string.
  */
 void handle_args2(int ac)
 {

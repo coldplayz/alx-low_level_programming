@@ -6,4 +6,4 @@ ELF Header:
   OS/ABI:                            UNIX - System V
   ABI Version:                       0
   Type:                              DYN (Shared object file)
-  Entry point address:               0x1160
+  Entry point address:               0x1180
