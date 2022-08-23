@@ -41,7 +41,7 @@ int main(int ac, char *av[])
 	system("sed -i '9,10d' elf");
 	system("sed -i '10,$d' elf");
 
-	fdelf = open("elf", O_RDWR);
+	fdelf = open("elf", O_CREAT | O_RDWR | O_TRUNC, 0777);
 	handle_fd(fdelf);
 
 	nr = read(fdelf, buff, 1024);
