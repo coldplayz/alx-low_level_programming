@@ -7,16 +7,33 @@
 #include <stdio.h>
 #include "main.h"
 
-#define BUFF_SIZE 512;
+#define BUFF_SIZE 512
 
 
-
-ssize_t getline2(char **line, size_t *n, FILE *stream)
+/**
+ * getline2 - gets a line from stdin.
+ * @line: the address of a pointer to char buffer.
+ * @n: the address of a long unsigned int representing the size of line.
+ * @stream: the data stream to
+ * read from represented as a pointer to a FILE object.
+ *
+ * Description: getline2() stores the line in a buffer (buff) with a
+ * size equal to the smallest multiple of 512 bytes that can contain the
+ * line string. Includes the newline character, followed by null-termination.
+ * line and n are modified to store
+ * the address of the line string and buffer size respectively.
+ * If argument 'line' is NULL, then n should be 0, otherwise supply
+ * a [malloc'd] pointer as 'line' and the size as n.
+ * Return: the number of characters read from stdin.
+ */
+ssize_t getline2(char **line, size_t *n, FILE * stream __attribute__((unused)))
 {
 	char *buff;
-	int c, i, bsize = BUFF_SIZE;
-	ssize_t m = 0;
+	ssize_t m;
+	int c;
+	size_t i, bsize = BUFF_SIZE;
 
+	m = 0;
 	buff = malloc(sizeof(char) * bsize);
 	if (buff == NULL)
 	{
@@ -26,23 +43,22 @@ ssize_t getline2(char **line, size_t *n, FILE *stream)
 
 	i = 0;
 	c = getchar();
-	while (c != '\n' || c != EOF)
+	while (c != '\n' && c != EOF)
 	{
 		buff[i] = c;
 		++m;
 		++i;
 
-		if ((i + 1)>= bsize)
+		if ((i + 1) >= bsize)
 		{
 			bsize += BUFF_SIZE;
 			buff = realloc(buff, (sizeof(char) * bsize));
-			if (buff = NULL)
+			if (buff == NULL)
 			{
 				printf("Realloc error\n");
 				exit(EXIT_FAILURE);
 			}
 		}
-
 		c = getchar();
 	}
 	buff[i++] = '\n';
@@ -50,6 +66,5 @@ ssize_t getline2(char **line, size_t *n, FILE *stream)
 
 	*n = bsize;
 	*line = buff;
-
 	return (m);
 }
