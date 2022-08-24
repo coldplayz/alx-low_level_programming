@@ -5,5 +5,5 @@ ELF Header:
   Version:                           1 (current)
   OS/ABI:                            UNIX - System V
   ABI Version:                       0
-  Type:                              EXEC (Executable file)
-  Entry point address:               0x400600
+  Type:                              DYN (Shared object file)
+  Entry point address:               0x1160
