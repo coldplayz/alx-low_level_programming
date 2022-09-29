@@ -36,7 +36,7 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 
 
 /**
- * dlistint_len2 - determines the number of elements of the structure dlistint_s
+ * dlistint_len2 - determines number of elements of the structure dlistint_s
  * @h: the head of a structure of type 'struct dlistint_s'
  *
  * Return: the number of nodes in the list
