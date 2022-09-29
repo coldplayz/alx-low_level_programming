@@ -109,7 +109,11 @@ listint_t *list_loop_node2(const listint_t *head);
 int check_cycle(listint_t *list);
 listint_t *insert_node(listint_t **head, int number);
 int is_palindrome(listint_t **head);
+
+/* Doubly linked list */
 size_t print_dlistint(const dlistint_t *h);
+size_t dlistint_len(const dlistint_t *h);
+
 
 
 
