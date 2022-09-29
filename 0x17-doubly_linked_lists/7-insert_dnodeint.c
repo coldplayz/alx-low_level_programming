@@ -41,7 +41,8 @@ dlistint_t *insert_dnodeint_at_index(
 		temp2->next = new;	/* struct at temp2 now points to new... */
 		new->next = temp;	/* new now points to struct at temp, which it displaced */
 		new->prev = temp2;	/* new now between temp2 and temp */
-		temp->prev = new;	/* node previously at idx now points to new as prev */
+		if (temp)		/* idx < list_len, not equal to it */
+			temp->prev = new;	/* node previously at idx now points to new as prev */
 	}
 	else if (idx == 0)		/* if first node is to be displaced by new */
 	{
