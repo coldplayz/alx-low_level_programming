@@ -46,7 +46,8 @@ dlistint_t *insert_dnodeint_at_index(
 	}
 	else if (idx == 0)		/* if first node is to be displaced by new */
 	{
-		(*head)->prev = new;
+		if (*head)		/* list head not NULL */
+			(*head)->prev = new;
 		*head = new;		/* new is now the head... */
 		new->prev = NULL;
 		new->next = temp;	/* ...and new is pointing to the previous head */
