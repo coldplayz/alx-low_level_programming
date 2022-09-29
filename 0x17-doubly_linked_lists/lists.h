@@ -41,18 +41,17 @@ typedef struct listint_s
  * @next: points to the next node
  *
  * Description: doubly linked list node structure
- * 
  */
 typedef struct dlistint_s
 {
-    int n;
-    struct dlistint_s *prev;
-    struct dlistint_s *next;
+	int n;
+	struct dlistint_s *prev;
+	struct dlistint_s *next;
 } dlistint_t;
 
 
 /**
- * in - collection of integers
+ * struct in - collection of integers
  * @n: an int
  * @i: an int
  * @flag: an int
@@ -67,7 +66,7 @@ typedef struct in
 } in;
 
 /**
- * st - collection of pointers to listint_t objects
+ * struct st - collection of pointers to listint_t objects
  * @temp1: a pointer to listint_t type
  * @temp2: a pointer to listint_t type
  *
@@ -110,6 +109,8 @@ listint_t *list_loop_node2(const listint_t *head);
 int check_cycle(listint_t *list);
 listint_t *insert_node(listint_t **head, int number);
 int is_palindrome(listint_t **head);
+size_t print_dlistint(const dlistint_t *h);
+
 
 
 #endif /*lists_h*/
