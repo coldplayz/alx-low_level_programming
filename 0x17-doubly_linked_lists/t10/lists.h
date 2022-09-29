@@ -113,6 +113,13 @@ int is_palindrome(listint_t **head);
 
 /* string operations */
 int str_palindrome(char *str);
+void rev_string(char *s);
+
+
+/* integeral operations */
+char *itoa3(long int n);
+long int num_len2(long int n);
+
 
 
 /* Doubly linked list */
