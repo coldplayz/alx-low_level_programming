@@ -56,7 +56,7 @@ typedef struct list_s
  * @free0: an int determining whether to free str_ar[0] or not (0).
  * @bltin_nm: array of strings storing the names of built-in shell commands.
  * @pid: an object storing the shell's process id.
- * @noscript: int indicating whether input is from a script file (0), or not (1).
+ * @noscript: int indicating if input is from a script file (0), or not (1).
  * @content: a message string about the struct contents.
  */
 typedef struct shell
@@ -87,6 +87,9 @@ typedef struct shell
  * @ptc: static array of pointers to char.
  * @pti: static array of pointers to int.
  * @pptc: static array of pointers to pointers to char.
+ * @ci: an int.
+ * @ii: an int.
+ * @pi: an int.
  */
 typedef struct mallocd
 {
@@ -304,7 +307,8 @@ int launcher(char **str_ar, char ***envp,
 ssize_t getline3(char **line, size_t *n,
 		FILE *stream __attribute__((unused)));
 int val_line(char **input);
-int exit2(char **sarr, char ***envp __attribute__((unused)),
+int exit2(
+		char **sarr, char ***envp __attribute__((unused)),
 		int *status, int *free __attribute__((unused)));
 typedef void (*sighandler_t)(int);
 void sigint_handler(int signum);
@@ -313,7 +317,8 @@ int char_srch(char *str, char xter);
 int parser_launcher(char *line, char ***envp,
 		char **bltin_nm, int *b, int *status, int *_free, char *shell_nm);
 int _printenv(char **sarr, char ***envp, int *status, int *free);
-int alias2(char **sarr, char ***envp __attribute__((unused)),
+int alias2(
+		char **sarr, char ***envp __attribute__((unused)),
 		int *status __attribute__((unused)), int *free __attribute__((unused)));
 int upd_alias_val(char **sarr, char ***alias);
 int upd_alias_noval(char **sarr, char ***alias);

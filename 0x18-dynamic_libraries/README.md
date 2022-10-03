@@ -2,4 +2,6 @@
 
 * libdynamic.so: a library of 20 object files representing functions.
 
+* 1-create_dynamic_lib.sh: script that automatically creates a shared library.
+
 
