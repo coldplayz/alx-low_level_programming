@@ -4,4 +4,4 @@
 
 * 1-create_dynamic_lib.sh: script that automatically creates a shared library.
 
-
+* 100-operations.so: C library of functions callable from Python.
