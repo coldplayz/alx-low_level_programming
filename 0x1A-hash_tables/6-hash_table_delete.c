@@ -22,6 +22,7 @@ void hash_table_delete(hash_table_t *ht)
 			while (tmp)
 			{
 				tmp2 = tmp->next;
+				free(tmp->key);
 				free(tmp->value); /* free the duplicated string address */
 				free(tmp); /* free the malloc'd node */
 				tmp = tmp2;
@@ -29,5 +30,6 @@ void hash_table_delete(hash_table_t *ht)
 		}
 	}
 
+	free(ht->array);
 	free(ht);
 }
