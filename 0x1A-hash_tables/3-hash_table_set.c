@@ -19,7 +19,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	int stat;
 	char *val, *key2;
 
-	if (key == NULL || strcmp(key, "") == 0)
+	if (key == NULL || strcmp(key, "") == 0 || value == NULL || ht == NULL)
 	{
 		return (0);
 	}
