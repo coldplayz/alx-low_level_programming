@@ -13,3 +13,5 @@
 * 5-hash_table_print.c: prints a hash_node_t hash table.
 
 * 6-hash_table_delete.c: deletes a hash_node_t hash table.
+
+* 100-sorted_hash_table.c: implements a sorted hash table data structure, PHP style.
