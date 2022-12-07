@@ -8,7 +8,7 @@ NAME = school
 all : school 
 
 school : main.o school.o m.h
-	$(CC) $(OBJ) -o school
+	$(CC) main.o school.o -o school
 
 main.o : main.c m.h
 	$(CC) -c -o main.o main.c
