@@ -4,4 +4,6 @@
 
 * 1-Makefile: compiles with variables.
 
+* 2-Makefile: recompiles only updated source files.
+
 
