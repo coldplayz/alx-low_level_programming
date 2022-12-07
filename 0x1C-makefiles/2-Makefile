@@ -1,6 +1,6 @@
 CC = gcc
 SRC = main.c school.c
-OBJ = $(wildcard *.o)
+# OBJ = $(wildcard *.o)
 NAME = school
 
 .PHONY : all school
