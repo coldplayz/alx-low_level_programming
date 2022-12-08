@@ -46,7 +46,7 @@ def island_perimeter(grid):
                 if i != (grid_len - 1) and grid[i + 1][j] == 1:  # bottom sq
                     connected = 1
                     default_cell_perimeter -= 1
-                if j != 0 and grid[i][j - 1] == 1: # check left square
+                if j != 0 and grid[i][j - 1] == 1:  # check left square
                     connected = 1
                     default_cell_perimeter -= 1
                 if j != (row_len - 1) and grid[i][j + 1] == 1:  # right sq
