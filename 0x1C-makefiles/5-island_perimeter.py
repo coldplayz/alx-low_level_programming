@@ -28,23 +28,39 @@ def island_perimeter(grid):
 
     grid_len = len(grid)
     row_len = len(grid[0])
-    num_land_zones = 0
+    land_present = 0
+    connected = 0
+    default_cell_perimeter = 4
     perimeter = 0
 
     for i in range(grid_len):  # i represents row number
         for j in range(row_len):  # j represents column number
             square = grid[i][j]
             if square == 1:  # square is a land zone
+                land_present = 1  # for case where only one cell
                 # Check if the square is horizontally or vertically connected
                 if i != 0 and grid[i - 1][j] == 1:  # check top square
-                    num_land_zones += 1
-                elif i != (grid_len - 1) and grid[i + 1][j] == 1:  # bottom sq
-                    num_land_zones += 1
-                elif j != 0 and grid[i][j - 1] == 1: # check left square
-                    num_land_zones += 1
-                elif j != (row_len - 1) and grid[i][j + 1]:  # check right sq
-                    num_land_zones += 1
+                    # Reduce default cell perimeter for each connected side
+                    connected = 1
+                    default_cell_perimeter -= 1
+                if i != (grid_len - 1) and grid[i + 1][j] == 1:  # bottom sq
+                    connected = 1
+                    default_cell_perimeter -= 1
+                if j != 0 and grid[i][j - 1] == 1: # check left square
+                    connected = 1
+                    default_cell_perimeter -= 1
+                if j != (row_len - 1) and grid[i][j + 1] == 1:  # right sq
+                    connected = 1
+                    default_cell_perimeter -= 1
 
-    perimeter = (1 * 2) + (num_land_zones * 2)  # formula for perimeter of rec
+                if connected:
+                    perimeter += default_cell_perimeter
+
+            # Reset defaults
+            default_cell_perimeter = 4
+            connected = 0
+
+    if perimeter == 0 and land_present:
+        perimeter = 4
 
     return perimeter
