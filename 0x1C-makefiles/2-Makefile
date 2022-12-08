@@ -1,10 +1,8 @@
 CC = gcc
 SRC = main.c school.c
-# OBJ = $(wildcard *.o)i
+# OBJ = $(wildcard *.o)
 OBJ = $(SRC:.c=.o)
 NAME = school
-
-.PHONY : all school
 
 all : school main.o school.o
 
