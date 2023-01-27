@@ -6,4 +6,6 @@
 
 * 100-jump.c: searches for a value in a sorted array of integers using the Jump search algorithm.
 
+* 102-interpolation.c: searches for a value in a sorted array of integers using the Interpolation search algorithm.
+
 
