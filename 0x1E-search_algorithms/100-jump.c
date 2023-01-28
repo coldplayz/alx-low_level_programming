@@ -37,21 +37,26 @@ int jump_search(int *array, size_t size, int value)
 		{
 			break;
 		}
+		if (prev_idx >= (int)size)
+		{
+			break;
+		}
 		prev_idx = curr_idx;
 		curr_idx = curr_idx + block;
 		if (prev_idx < (int)size)
 		{
 			printf("Value checked array[%d] = [%d]\n", prev_idx, array[prev_idx]);
 		}
-
-		if (prev_idx >= (int)size)
-		{
-			prev_idx -= block;
-			curr_idx -= block;
-			break;
-		}
 	}
 
+	if (curr_idx < (int)size)
+	{
+		printf("Value checked at index [%d] = [%d]\n", curr_idx, array[curr_idx]);
+	}
+	if (curr_idx >= (int)size)
+	{
+		printf("Value checked at index [%d] = [%d]\n", size - 1, array[size - 1]);
+	}
 
 	/* Answer, or last, block linear search */
 	while (array[prev_idx] < value)
@@ -59,8 +64,16 @@ int jump_search(int *array, size_t size, int value)
 		if (flag)
 		{
 			flag = 0;
-			printf(
-					"Value found between indexes [%d] and [%d]\n", prev_idx, curr_idx);
+			if (curr_idx >= (int)size)
+			{
+				printf(
+						"Value found between indexes [%d] and [%d]\n", prev_idx, (int)size - 1);
+			}
+			else
+			{
+				printf(
+						"Value found between indexes [%d] and [%d]\n", prev_idx, curr_idx);
+			}
 		}
 		if (prev_idx < (int)size)
 		{
@@ -68,7 +81,7 @@ int jump_search(int *array, size_t size, int value)
 		}
 		prev_idx++;
 
-		if (prev_idx > _min(curr_idx, size))
+		if (prev_idx >= _min(curr_idx, size))
 		{
 			return (-1);
 		}
