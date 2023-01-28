@@ -55,7 +55,7 @@ int jump_search(int *array, size_t size, int value)
 	}
 	if (curr_idx >= (int)size)
 	{
-		printf("Value checked at index [%d] = [%d]\n", size - 1, array[size - 1]);
+		printf("Value checked at index [%d] = [%d]\n", (int)size - 1, array[size - 1]);
 	}
 
 	/* Answer, or last, block linear search */
